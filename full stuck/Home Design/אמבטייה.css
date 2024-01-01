@@ -1,0 +1,58 @@
+/* עיצוב התמונות בתוך קופסאות המוצרים */
+.product-box img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    padding: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-box img:hover {
+    transform: scale(1.05);
+}
+
+/* עיצוב לקישורים */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* עיצוב לתיקרות המוצרים */
+.product-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 2rem;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.product-box h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-box p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.product-box a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* עיצוב התוכן התחתון */
+footer p {
+    text-align: center;
+    margin: 2rem 0;
+}

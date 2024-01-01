@@ -1,0 +1,86 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.product-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 2rem;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-box img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.store-info {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 2rem;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.store-info h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.store-info p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+
+* {
+	direction: rtl;
+	/*Set the line height for the element*/
+	line-height: 150%;
+	/*The vertical-align property sets the vertical alignment of an element.*/
+	margin: 0;
+	word-spacing: 6px;
+}
