@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var day =+prompt("What is the day today 1-7")
+        var daysUntilFriday
+        var dayName
+
+        switch(day){
+            case 1:
+                daysUntilFriday = 5
+                dayName = 'sunday'
+                break
+            case 2:
+            dayName = 'Monday'
+        daysUntilFriday = 4
+        break
+    case 3:
+        dayName = 'Tuesday'
+        daysUntilFriday = 3
+        break
+    case 4:
+        dayName = 'Wednesday'
+        daysUntilFriday = 2
+        break
+    case 5:
+        dayName = 'Thursday'
+        daysUntilFriday = 1
+        break
+    case 6:
+        dayName = 'Friday'
+        daysUntilFriday = 0
+        break
+    case 7:
+        dayName = 'Saturday'
+        daysUntilFriday = 6
+        break
+    default:
+        day = undefined
+        dayName = 'invalid day'
+        }
+    
+if (daysUntilFriday === 0) {
+    console.log('its Friday!')
+} else if (daysUntilFriday === 1) {
+    console.log('Friday is tomorrow!')
+} else if (day) {
+    console.log(
+        'today is',
+        dayName,
+        'its ' + daysUntilFriday + ' Days until Friday.'
+    )
+} else {
+    console.log('is it a maayan calendar or what?')
+}   
+      
+     
+    </script>
+</body>
+</html>

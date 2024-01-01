@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var triangleFace1 = +prompt('Plz enter a triangle face-1')
+        var triangleFace2 = +prompt('Plz enter a triangle face-2')
+        var triangleFace3 = +prompt('Plz enter a triangle face-3')
+    if(triangleFace1===triangleFace2 && triangleFace1 === triangleFace3 ){
+        console.log('Is a equle triangle');
+    }else if(
+        triangleFace1 === triangleFace2 ||
+        triangleFace1 === triangleFace3 ||
+        triangleFace2 === triangleFace3
+    ){
+        console.log('It is isosceles triangle');
+    }else{
+        console.log('It is a regular ');
+    }
+
+
+    </script>
+</body>
+</html>

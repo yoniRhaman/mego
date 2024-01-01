@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roulette Game</title>
+</head>
+<body>
+    <script>
+        let roletaMaxNumbers = 36;
+
+        const printAllNumbers = () => {
+           for (let i = 0; i < roletaMaxNumbers; i++) {
+            console.log("The number on the roulette is", i, 'and it is', oddNumbers(i));
+           }
+        }
+
+        const oddNumbers = (num) => {
+            return num % 2 !== 0;
+        }
+
+        const gameStart = () => {
+            printAllNumbers();
+            const luckyNumber = getRandomNumber(0, roletaMaxNumbers);
+            const userLuckyNumber = +prompt('Enter your number!');
+            console.log('User number was:', userLuckyNumber);
+            console.log('Lucky number:', luckyNumber);
+        }
+
+        const getRandomNumber = (min, max) => {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        };
+
+        gameStart();
+    </script>
+</body>
+</html>
