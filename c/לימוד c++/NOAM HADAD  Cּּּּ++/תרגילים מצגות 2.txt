@@ -1,0 +1,158 @@
+תרגיל 1
+    //דירות 3   120 
+    //דדירות 4 150
+    //דירות 5 חדרים דופלקס 200 רגילות 180
+    int nomOfrooms;
+    bool duplex;
+
+    cout << "Enter the numbers of rooms ";
+    cin >> nomOfrooms;
+
+    if (nomOfrooms == 3)
+        cout << "The price is :120" << endl;
+    else if (nomOfrooms == 4)
+        cout << "The price is:150" << endl;
+    else if (nomOfrooms == 5)
+        cout << "Enter 1 if is duplex or 0 if is regular ";
+    cin >> duplex;
+    if (duplex == 1)
+        cout << "The price is:200" << endl;
+    else if (duplex == 0)
+        cout << "The price is:180" << endl;
+    else
+        cout << "You do a mistake" << endl;
+
+תרגיל 2
+//עבור כל קנייה של 300 שח מקבלים 50 שח מתנה
+    //עבור כל קניה של 3 פריטים מקבלים 20% הנחה
+    //אין כפל מבצעים
+    // קלט סכום הקניה  מספר הפריטים
+    //חישוב : מחיר לאחר מבצע 1
+    //חישוב : מחיר לאחר מבצע 2
+    //פלט מחיר לאחר הנחה 
+    //המבצע שבו השתמשנו
+    double pay, afterDiscount1, afterDiscount2;
+    int numOfitems;
+
+
+    cout << "Enter the sum you buy" << endl;
+    cin >> pay;
+
+    cout << "Enter the numbers of itemes you buy" << endl;
+    cin >> numOfitems;
+    
+    afterDiscount1 = pay - (pay / 300) * 50;
+    if (numOfitems >= 3)
+        afterDiscount2 = pay * 0.8;
+
+    else 
+        afterDiscount2 = pay;
+
+    if (afterDiscount1 < afterDiscount2)
+        cout << "The price is: " << afterDiscount1 << endl;
+
+    else
+        cout << "The price is: " << afterDiscount2 << endl;
+
+
+//תרגיל 3
+	int examGrade, middleExamGrade, hwGrade, finalGrade =0 ,attendance ,tempGrade;
+	cout << "How many prucent you come to lesson" << endl;
+	cin >> attendance;
+	if (attendance < 80)
+		cout << "The grade you get: " << finalGrade << endl;
+	else
+		cout << "Enter your test Grade " << endl;
+	cin >> examGrade;
+	if(examGrade >= 60)
+		cout << "Enter your Exam Grade " << endl;
+	cin >> middleExamGrade;
+	cout << "Enter your home work Grade " << endl;
+	cin >> hwGrade;
+	if (middleExamGrade > examGrade)
+		tempGrade = 0.8 * examGrade + 0.2 * middleExamGrade;
+	 else 
+		tempGrade = examGrade;
+	finalGrade = 0.1 * hwGrade + 0.9 * tempGrade;
+	
+	finalGrade = examGrade;
+	cout << "Yore finel Grade is: " << finalGrade << endl;
+
+
+  //תרגיל 4
+    int x_salery, y_tax, age ,kids;
+    bool close_guliver;
+    
+    cout << "Enter a salery number: " << endl;
+    cin >> x_salery;
+
+    cout << "Enter the age: " << endl;
+    cin >> age;
+
+    cout << "Enter how many kids you have: " << endl;
+    cin >> kids;
+
+    cout << "Enter if you close to guliver 1 if not 0" << endl;
+        cin >> close_guliver;
+    //בדיקת גודל משכורת לעומת מס
+        if (x_salery < 5000) {
+            y_tax = 0;
+        }
+        else if (5000 <= x_salery <= 10000) {
+            y_tax = 0.1 * x_salery;
+        }
+        else if (10000 <= x_salery <= 15000) {
+            y_tax = 0.35 * x_salery;
+        }
+        else {
+            y_tax = 0.5 * x_salery;
+        }
+        //בדיקה האם הוא מבוגר או לא 
+        if ( age < 18) {
+            y_tax = 0.5 * x_salery;
+        }//בדיקה האם קרוב לגוליבר ויש לו משכורת נמוכה מ10000
+        else if (close_guliver && 10000 > x_salery) {
+            y_tax -= 400;
+        }//בדיקה כמה ילדים יש לו
+        if (kids > 3) {
+            y_tax -= 900;
+        }
+        else {
+            y_tax -= (kids * 300);
+        }
+        cout << "The resident with age: " << age << " and kids: " << kids
+            << " need to pay tax: " << y_tax << endl;
+
+
+
+//תרגיל 5
+    int grade_x, tasks_n, average_y,result;
+
+    cout << "Enter your grade test" << endl;
+    cin >> grade_x;
+
+    cout << "Enter how many test you do" << endl;
+    cin >> tasks_n;
+
+    cout << "Enter what is your average" << endl;
+    cin >> average_y;
+
+    if (tasks_n <= 4) {
+        result = grade_x;
+    }
+    else if (5 <= tasks_n <= 7) {
+        if (60 > grade_x) {
+            result = 0.9 * grade_x + 0.1 * average_y;
+        }
+        else {
+            result = 0.8 * grade_x + 0.2 * average_y;
+        }
+    }if (tasks_n >= 8) {
+        if (60 > grade_x) {
+            result = 0.6 * grade_x + 0.4 * average_y;
+        }
+        else {
+            result = 0.7 * grade_x + 0.3 * average_y;
+        }
+    }
+    cout << "Your final result is: " << result << endl;

@@ -1,0 +1,42 @@
+ //pointers
+    //זה אפשרות לעבוד עם כתובות
+    // זיכרון הכתובת
+
+    int var = 5;
+     
+    cout << "var = " << var << endl;
+    //&var נותן לנו את הכתובת של המשתנה בזיכרון
+    cout << "address of var = " << &var << endl;
+
+//משתנים  הערכים מאוכסנים בערך עצמו וגם בכתובת 
+    int* ptr;
+    //פה הגדרנו את המשתנה בתור pointer
+    //עוד דוגמא
+    int* ptr1, ptr2;
+    //עכשיו שניהם משתנים בpointers
+    //ה* זה חלק מהסינטקס להגדרה של פוינטר
+
+
+    int* pc, c;
+    c = 5;
+    cout << "The first adress of pc = " << &pc << endl;
+
+    //עושה הקצאה לכתובת שתהיה גם ב pc
+    pc = &c;
+    
+    cout << "value of pc = " << pc << endl;
+    cout << "address of c = " << &c << endl;
+    //השוואת הכתובות לשתי משתנים
+
+ int* pc, c = 5;
+    //pc contains address of c
+    pc = &c;
+
+    cout << "Value stored in pc address =  " << *pc;
+
+    //Value stored in pc address =  5
+
+
+
+
+

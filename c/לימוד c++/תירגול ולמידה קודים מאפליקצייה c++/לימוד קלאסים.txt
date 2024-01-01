@@ -1,0 +1,222 @@
+שיעור 1
+#include <iostream>
+#include <string>
+#include <ctime>
+
+using namespace std;
+
+class car {
+public:
+
+    //data member 
+    int gear = 6;
+    //member of function
+    void drive() {
+        cout << "pressing Accelerator";
+    }
+    //השם של הקלאס car
+    //יש בו חבר בזיכרון ששמו gear
+    //ופונקצייה בשם drive()
+};
+
+int main() {
+    /*
+    "OOP"-object oriented programming
+    הקלאסים פוטר הרבה בעיות על ידי המרה של אובייקטיםבשביל לעשות זאת צריך לעשות שתי דברים
+    .לייצר קלאס
+    .לייצר אובייקט מהקלאס
+    תחשוב שקלאס זה כמו טביעת אצבע של כל הפרטים
+    */
+    class class_name {
+
+    };
+  //פה יש השם של הקלאס שמכיל בתוכו את הזיכרון   
+  //ובתוך הפונקצייה שלוקח את כל הזיכרון
+
+    return 0;
+}
+
+
+
+
+
+#include <iostream>
+#include <string>
+#include <ctime>
+
+using namespace std;
+class car {
+public:
+    int gear = 6;
+    void drive() {
+        cout << "Pressing Acclerator";
+}
+};
+int main() {
+   //בשביל להכנס למחלקה אנחנו צריכים לעשות אובייקט למחלקה
+   //ליצור אובייקט של רכב
+    car car1;
+    //גישה לחבר הזיכרון
+    cout << "Gear :" << car1.gear << endl;
+    //גישה לחבר הפונקצייה
+    car1.drive();
+    //אנחנו משתמשים באופרטור נקודה כדי לגשת למידע של האובייקט
+
+
+    return 0;
+}
+
+
+
+שיעור 2
+#include <iostream>
+#include <string>
+#include <ctime>
+
+using namespace std;
+
+class car {
+public:
+    //data member
+    int gear, top_speed;
+
+    //constructor בנייה
+  car() {
+      cout << "initializing values " << endl;
+      gear = 4;
+      top_speed = 300;
+    }
+
+};
+
+// ההבדל בין קלאסים לפונקציות שבקלאסים לא צריך חזרה    
+int main() {
+    //ליצור אובייקטים
+    car car1;
+    //  כמו שאתה רואה כשהכנסנו את האובייקט 
+    // אוטומותית מביא את הנתונים בקלאס
+
+    cout << "Gear: " << car1.gear << endl;
+    cout << "Top speed: " << car1.top_speed << endl;
+
+    return 0;
+}
+
+שיעור 3
+
+
+#include <iostream>
+#include <string>
+#include <ctime>
+
+using namespace std; 
+
+class student {
+//public data
+public:
+    int id;
+    double gpa;
+};
+   
+int main() {
+//Access Modifiers
+//אנחנו הולכים ללמוד על גישות משתנים pubiic and private
+//private members- can be accessed only from within hhe class
+//public members- can be accessed from anywhere
+
+//creat object 
+    student s1;
+
+    s1.id = 223;
+    s1.gpa = 3.9;
+
+    cout << s1.id << endl;
+    cout << s1.gpa;
+    //כמו שאתם רואים אנחנו יכולים לקבל מידע main
+    //זה אפשרי בגלל ששתי הנתונים מגיעים מ public
+
+    return 0;
+}
+
+
+#include <iostream>
+#include <string>
+#include <ctime>
+
+using namespace std; 
+
+class student {
+  //private data
+private:
+    int id;
+};
+   
+int main() {
+  //create object
+    student s1;
+
+    //Error Code
+    s1.id = 223;
+    //להשים לב שאם לא מגדירים את הסביבה של הקלאס זה יהיה פרטי בברירת מחדל
+
+    return 0;
+}
+
+
+
+#include <iostream>
+#include <string>
+#include <ctime>
+
+using namespace std; 
+class student {
+public:
+
+ //static variable declaration
+    static int subject_code;
+    //פה הגדרנו נתון סטטי subject_code
+    //כמו שאתה רואה זה בתוך הקלאס student
+};
+
+//static variable definition 
+int student::subject_code;
+   //הגדרנו מחוץ לקלאס לכן צריך לעשות " :: " כדי לגשת ולאתחל
+int main() {
+
+
+//access static variables 
+  student::subject_code = 13;
+  cout << student::subject_code;//13
+
+    return 0;
+}
+
+
+#include <iostream>
+#include <string>
+#include <ctime>
+
+using namespace std; 
+
+class student {
+public:
+    //declering of static variable
+    static int subject_code;
+
+    //stasice function
+    static void display_code() {
+        cout <<"subject code = " << subject_code;
+
+    }
+};
+//definition of static variable 
+int student::subject_code = 110;
+
+int main() {
+
+ // call static function 
+    student::display_code();
+
+
+    return 0;
+}

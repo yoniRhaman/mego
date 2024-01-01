@@ -1,0 +1,325 @@
+#include <iostream>
+using namespace std;
+int main() {
+    const int size = 10;
+    int numbers[size];
+
+    // קליטת הערכים מהמשתמש ושמירתם במערך
+    cout << "Enter " << size << " numbers to find if he even numbers\n";
+    for (int i = 0; i < size; i++) {
+        cin >> numbers[i];
+    }
+
+    // הצגת הערכים הזוגיים בלבד
+    cout << "The even numbers is:\n";
+    for (int i = 0; i < size; i++) {
+        if (numbers[i] % 2 == 0) {
+            cout << numbers[i] << " ";
+        }
+    }
+    cout << endl;
+
+    return 0;
+}
+
+לימוד מצגת
+הדפסת המערך שהתקבל
+#include <iostream>
+using namespace std;  
+
+const int SIZE = 5;
+int main() {
+    int arr[SIZE], i;
+    
+    cout << "Enter a " << SIZE << "number for arrays" << endl;
+    for (int i = 0; i < SIZE; i++) {
+        cin >> arr[i];
+    }
+    cout << "The number of the arr is:" << endl;
+    for (int i = 0; i < SIZE; i++) {
+        cout << arr[i] << "  ";
+        
+    }
+
+    return 0;
+
+הדפסת המערך שהתקבל הפוך
+#include <iostream>
+using namespace std;  
+
+const int SIZE = 5;
+int main() {
+    int arr[SIZE], i;
+    
+    cout << "Enter a " << SIZE << "number for arrays" << endl;
+    for (int i = 0; i < SIZE; i++) {
+        cin >> arr[i];
+    }
+    cout << "The number of the arr is:" << endl;
+    for (int i = SIZE -1; i >= 0; i--) {
+        cout << arr[i] << "  ";
+        
+    }
+
+    return 0;
+}
+
+המספר הכי גבוהה במערך
+#include <iostream>
+using namespace std;  
+
+const int SIZE = 4;
+int main() {
+    int arr[SIZE], i, max;
+    
+    cout << "Enter a " << SIZE << "number to find the max number" << endl;
+    for (int i = 0; i < SIZE; i++) {
+        cin >> arr[i];
+
+    }max = arr[0];
+    for (int i = 1; i < SIZE; i++) {
+        if (arr[i] > max)
+            max = arr[i];
+    }
+    cout << "The max number of the arr is:" << max << endl;
+    
+    return 0;
+}
+
+הפונקציה sizeof
+ //חישוב גודל זיכרון במערך
+    int arr[] = { 4,3,2,7 };
+
+    int size = sizeof(arr) / sizeof(int);
+    cout << "The are " << size << "numbers in array:" << endl;
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+
+
+
+#include <iostream>
+using namespace std;  
+const int SIZE = 5;
+int main() {
+//הדפסת היסטוגרמה של ערכי מערך
+    int arr[SIZE], left, right;
+    bool isSymeteic = true;
+
+    cout << "Enter" << SIZE << " number" << endl;
+    for (int i = 0; i < SIZE; i++) {
+        cin >> arr[i];
+    }
+    for (int left = 0, right = SIZE - 1; left < right && isSymeteic; left++, right--) {
+        if (arr[left] != arr[right])
+            isSymeteic = false;
+    }
+    if (isSymeteic)
+        cout << "The arrays is symeteic" << endl;
+    else
+        cout << "The arrays is not symeteic" << endl;
+
+
+    return 0;
+}
+קליטת אותיות למערך להדפיס ולהגיד גודל מערך
+#include <iostream>
+using namespace std;  
+const int SIZE = 10;
+int main() {
+
+    char arr[SIZE];
+
+    cout << "Enter a " << SIZE << "chars  for array\n";
+    for (int i = 0; i < SIZE; i++) {
+        cin >> arr[i];
+    }
+    cout << "The chars are:";
+    for (int i = 0; i < SIZE; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    int findsSize = sizeof(arr) / sizeof(arr[0]);
+    cout << "The numbers size is:" << findsSize << endl;
+
+    return 0;
+}
+
+תרגיל 1
+
+#include <iostream>
+using namespace std;  
+//לא מבין למה הקוד לא עובד לי
+const int SIZE = 10;
+int main() {
+    int count = 0;
+    bool fHasAppear;
+    char str[SIZE];
+    cout << "Please enter " << SIZE << " chars: ";
+    for (int i = 0; i < SIZE; i++)
+        cin >> str[i];
+    //print each char only once
+    cout << "The chars are: \n";
+    for (int i = 0; i < SIZE; i++)
+    {
+        fHasAppear = false;
+        for (int j = 0; j < i && !fHasAppear; i++)
+        {
+            if (str[i] == str[j])
+                fHasAppear = true;
+        }
+        if (!fHasAppear)
+        {
+            count << str[i];
+            count++;
+        }
+    }
+    cout << "There were" << cout << " different letters";
+
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int size = 10;
+    int arr[size];
+
+    // קליטת ערכים מהמשתמש ומילוי המערך
+    cout << "please enter " << size << " full numbers" << endl;
+    for (int i = 0; i < size; i++) {
+        cin >> arr[i];
+    }
+
+    // מציאת הערך המינימלי במערך
+    int minVal = arr[0];
+    for (int i = 1; i < size; i++) {
+        if (arr[i] < minVal) {
+            minVal = arr[i];
+        }
+    }
+
+תרגיל 1 סוף מצגת
+    // הדפסת האינדקסים של האיברים עם ערך מינימלי
+    cout << "The members with minimum value appear in the following indexes:" << endl;
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == minVal) {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+
+    // מציאת כמות האיברים עם ערך מינימלי
+    int count = 0;
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == minVal) {
+            count++;
+        }
+    }
+    cout << "The count of mineimum numbers is: " << count << endl;
+
+    return 0;
+}
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int size = 10;
+    int arr[size];
+
+    // קליטת ערכים מהמשתמש ומילוי המערך
+    cout << "please enter " << size << " full numbers" << endl;
+    for (int i = 0; i < size; i++) {
+        cin >> arr[i];
+    }
+
+    // מציאת הערך המינימלי במערך
+    int minVal = arr[0];
+    for (int i = 1; i < size; i++) {
+        if (arr[i] < minVal) {
+            minVal = arr[i];
+        }
+    }
+
+    // הדפסת האינדקסים של האיברים עם ערך מינימלי
+    cout << "The members with minimum value appear in the following indexes:" << endl;
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == minVal) {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+
+    // מציאת כמות האיברים עם ערך מינימלי
+    int count = 0;
+    for (int i = 0; i < size; i++) {
+        if (arr[i] == minVal) {
+            count++;
+        }
+    }
+    cout << "The count of mineimum numbers is: " << count << endl;
+
+    return 0;
+}
+
+תרגיל 2
+#include <iostream>
+using namespace std;
+
+int main() {
+    const int size = 10;
+    int arr[size];
+
+    // קליטת ערכים מהמשתמש ומילוי המערך
+    cout << "נא הכנס " << size << " מספרים שלמים:" << endl;
+    for (int i = 0; i < size; i++) {
+        cin >> arr[i];
+    }
+
+    // בדיקה אם ערכי המערך מהווים סדרה חשבונית
+    int diff = arr[1] - arr[0];
+    bool isArithmetic = true;
+    for (int i = 2; i < size; i++) {
+        if (arr[i] - arr[i - 1] != diff) {
+            isArithmetic = false;
+            break;
+        }
+    }
+
+    // הדפסת התוצאה
+    if (isArithmetic) {
+        cout << "ערכי המערך מהווים סדרה חשבונית." << endl;
+    }
+    else {
+        cout << "ערכי המערך אינם מהווים סדרה חשבונית." << endl;
+    }
+
+    return 0;
+}
+
+תרגיל 3
+#include <iostream>
+using namespace std;
+
+const int SIZE = 5;
+
+int main() {
+    char matrix[SIZE][SIZE];
+
+    // מילוי המטריצה והדפסתה
+    for (int i = 0; i < SIZE; i++) {
+        for (int j = 0; j < SIZE; j++) {
+            if (i == j || i == SIZE - 1 - j) {
+                matrix[i][j] = '*';
+            } else {
+                matrix[i][j] = ' ';
+            }
+            cout << matrix[i][j] << ' ';
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+

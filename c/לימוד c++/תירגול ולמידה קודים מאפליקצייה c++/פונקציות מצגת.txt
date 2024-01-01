@@ -1,0 +1,43 @@
+פונקצייה של חישוב חזקה 
+#include <iostream>
+using namespace std;
+int power(int a, int b) {
+    int i, result = 1;
+    for (i = 0; i < b; i++)
+        result *= a;
+    return result;
+}
+
+int main() {
+    int base, exponent, result;
+    cout << "please enter base and exponent: ";
+    cin >> base >> exponent;
+
+    result = power(base, exponent);
+    cout << base << "^" << exponent << "=" << result << endl;
+    return 0;
+}
+
+
+פונקצייה שמחשבת את המספר הגבוהה
+
+#include <iostream>
+using namespace std;
+int max(int x, int y) {
+    if (x > y)
+        return x;
+    //מבלי להשים else
+        return y;
+}
+
+
+int main() { 
+    int num1, num2, maximum;
+
+    cout << "Enter 2 numbers: ";
+    cin >> num1 >> num2;
+    maximum = max(num1, num2);
+        cout << "The max number is: " << maximum << endl;
+
+    return 0;
+}

@@ -1,0 +1,253 @@
+ double height;
+    double width;
+    double area;
+    double perimeter;
+
+    cout << "enter the height" << endl;
+    cin >> height;
+
+    cout << "enter the width " << endl;
+    cin >>  width;
+
+    cout << " the height is: " << height;
+    cout << " the width is: " <<  width ;
+
+    area = width * height;
+    cout << " the  area is " << area << endl;
+
+    perimeter = (width* 2) + (height*2);
+    cout << " the   perimeter is " << perimeter << endl;
+
+
+
+שטח מלבן
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num1, num2, num3;
+    bool isAscending;
+
+    cout << "Enter three numbers: ";
+    cin >> num1 >> num2 >> num3;
+
+    isAscending = (num1 < num2 && num2 < num3);
+
+    if (isAscending) {
+        cout << "The numbers were entered in ascending order." << endl;
+    } else {
+        cout << "The numbers were not entered in ascending order." << endl;
+    }
+
+    return 0;
+}
+סדר עולה של מספרים
+
+
+//כתוב תכנית הקולטת מהמשתמש רדיוס של מעגל (כמספר ממשי - לא שלם), ומדפיסה את שטחו ואת היקפו.
+  //  יש להציג 4 ספרות אחרי הנקודה בלבד(אין צורך לעגל).
+    double radius;
+    double perimiter;
+    double area;
+    double pai = 3.14;
+    double num2 = 2;
+
+    cout << "Enter the radius value:" << endl ;
+    cin >> radius; 
+
+    perimiter = pai * radius * radius;
+    cout << "The perimiter value:" << perimiter << endl;
+
+    area = pai * radius * num2;
+    cout << " The   area value:" << area  << endl;
+
+
+
+
+
+    double num1;
+    double num2;
+    double num3;
+    double sum;
+    double avg;
+    double allnum;
+     
+    cout << "enter the first number" << endl;
+    cin >> num1;
+
+    cout << "enter the secend number" << endl;
+    cin >> num2;
+
+    cout << "enter the triee number" << endl;
+    cin >> num3;
+
+    sum = num1 + num2 + num3;
+    allnum = 3;
+    avg = sum / allnum;
+    
+     cout << "the average number is:" <<  avg << endl;
+      ממוצע בין 3 משתנים
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int mynumber;
+
+    cout << "Enter a number" << endl;
+    cin >> mynumber;
+
+    //check if the number is negative
+    if (mynumber < 0)
+    {
+        cout << "The number is negative  " << endl;
+    }
+    else
+    {
+        cout << "The number is posetive" << endl;
+
+    }
+            
+    
+   
+
+    return 0;
+}
+
+
+בדיקת מספר שלילי או חיובי ב if eles
+
+
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    /*
+    כתוב תכנית הקולטת ציון במבחן מהמשתמש, במידה והציון עובר (70 ומעלה) התכנית תדפיס
+"Congratulations! You passed the test!",
+אחרת תדפיס
+"You need to take another test.".
+שים לב! לא מובטח שהקלט תקין. במידה והוכנס קלט שלילי יש להדפיס הודעה:
+"Grade must be greater than 0"
+
+    */
+    int grade = 0;
+    cout << "Enter number grade" << endl;
+    cin >> grade;
+    if (grade >= 70) {
+
+        cout << "Congratulations! You passed the test!" << endl;
+    }
+    else if (grade > 0){
+        cout << "You need to take another test\n";
+
+    }
+    else {
+        cout << "must be greater than 0" << endl;
+    }
+
+
+
+    return 0;
+}
+
+
+
+ציונים למבחן 
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int grade;
+
+    cout << "Enter your grade" << endl;
+    cin >> grade;
+    if (grade >= 95){
+        cout << "Excellent" << endl;
+        
+    }
+    else if (grade >= 90){
+        cout << "Very good" << endl;
+    } 
+    else if (grade >= 80) {
+        cout << "good" << endl;
+    }
+    else if (grade >=70) {
+        cout << "passable" << endl;
+    }
+    else if (grade >= 56) {
+        cout << "almost enough" << endl;
+    }
+    else if (grade >= 0) {
+        cout << "Failed"     << endl;
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <iostream>
+
+using namespace std;
+double add_numbers(double a, double b) {
+    double sum = a + b;
+    return sum;
+}
+ 
+int main() {
+    double result;
+
+    result = add_numbers(1.2, 3.3);
+    cout << result << endl;
+
+
+    result = add_numbers(7.2, 9.3);
+    cout << result << endl;
+    
+
+    return 0;
+}
+פונקצייה עם חזרה 
+
+
+
+string students[] = { "yoni","david","yosi","dan" };
+    for (int i = 0; i < sizeof(students)/sizeof(string); i++){
+        cout << students[i] << endl;
+    }
+    int grades[] = { 65,42,23,23,32,53 };
+
+    for (int grade : grades) {
+        cout << grade << endl;
+    }

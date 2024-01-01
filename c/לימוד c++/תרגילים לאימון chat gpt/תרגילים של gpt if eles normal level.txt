@@ -1,0 +1,173 @@
+Certainly! Here are some intermediate-level exercises to practice using if and else statements in the C++ language:
+
+Exercise 1:
+Write a program that asks the user to enter an integer and checks if it is positive, negative, or zero. Print an appropriate message based on the input.
+
+Exercise 2:
+Write a program that prompts the user to enter their age. If the age is below 18, print "You are a minor." If the age is between 18 and 65, print "You are an adult." Otherwise, print "You are a senior citizen."
+
+Exercise 3:
+Write a program that asks the user to enter three numbers and finds the maximum among them using if and else statements. Print the maximum value.
+
+Exercise 4:
+Write a program that prompts the user to enter their grade (A, B, C, D, or F) and prints a corresponding message:
+
+If the grade is 'A' or 'B', print "Excellent!"
+If the grade is 'C', print "Well done."
+If the grade is 'D', print "You passed."
+If the grade is 'F', print "You failed."
+For any other input, print "Invalid grade."
+Exercise 5:
+Write a program that asks the user to enter an integer and checks if it is even or odd. Print an appropriate message based on the input.
+
+Exercise 6:
+Write a program that prompts the user to enter a year and checks if it is a leap year. Print "Leap year" if it is, and "Not a leap year" otherwise. A leap year is divisible by 4 but not divisible by 100 unless it is also divisible by 400.
+
+Exercise 7:
+Write a program that asks the user to enter the lengths of three sides of a triangle and checks if it is a valid triangle. Print "Valid triangle" if it is, and "Invalid triangle" otherwise. A triangle is valid if the sum of the lengths of any two sides is greater than the length of the third side.
+
+Exercise 8:
+Write a program that prompts the user to enter a character and checks if it is a vowel (a, e, i, o, u) or a consonant. Print an appropriate message based on the input.
+
+Exercise 9:
+Write a program that asks the user to enter a year and checks if it is a leap year. Print "Leap year" if it is, and "Not a leap year" otherwise. A leap year is divisible by 4 and not divisible by 100 unless it is also divisible by 400.
+
+Exercise 10:
+Write a program that prompts the user to enter a grade percentage and converts it to a letter grade according to the following scale:
+
+90-100: A
+80-89: B
+70-79: C
+60-69: D
+Below 60: F
+These exercises should help you practice using if and else statements in C++. Have fun coding!
+
+
+Exercise 1:
+int num;
+	cout << "Enter a number for checks if it is positive, negative, or zero." << endl;
+	cin >> num;
+
+	if (num > 0)
+		cout << "The number " << num << " is posetive" << endl;
+	else if(num < 0)
+		cout << "The number " << num << " is negative" << endl;
+	else 
+		cout << "The number " << num << " is zero" << endl;
+
+
+Exercise 2:
+	int age;
+	cout << "Plz enter your age:" << endl;
+	cin >> age;
+	if (age < 18)
+		cout << "You are a minor." << endl;
+	else if (age > 18 && age < 65)
+		cout << "You are an adult." << endl;
+	else
+		cout << "You are a senior citizen." << endl;
+
+Exercise 3:
+int num1, num2, num3;
+
+	cout << "Enter three numbers to finds the maximum number " << endl;
+	cin >> num1 >> num2 >> num3;
+
+	if (num1 > num2 && num1 > num3)
+		cout << "The maximum number is: " << num1 << endl;
+	else if (num2 > num1 && num2 > num3)
+		cout << "The maximum number is: " << num2 << endl;
+	else 
+		cout << "The maximum number is: " << num3 << endl;
+Exercise 4:
+char ABCDF;
+	cout << "Enter your grade (A, B, C, D, or F)" << endl;
+	cin >> ABCDF;
+	if (ABCDF == 'A' || ABCDF == 'B'|| ABCDF == 'a' || ABCDF == 'b')
+		cout << "Excellent!" << endl;
+	if (ABCDF == 'C' || ABCDF == 'c')
+		cout << "Well done." << endl;
+	if (ABCDF == 'D'|| ABCDF == 'd')
+		cout << "You passed." << endl;
+	if (ABCDF == 'F'|| ABCDF == 'f')
+		cout <<  "You failed." << endl;
+	else 
+		cout << "Eror" << endl;
+Exercise 5:
+int num;
+	cout << " Enter an integer to checks if it is even or odd." << endl;
+		cin >> num;
+		if (num % 2 == 0)
+			cout << "The integer is even " << endl; 
+		else 
+			cout << "The integer is odd " << endl;
+
+Exercise 6:
+int year;
+	cout << "Enter a year to checks if it is a leap year." << endl;
+	cin >> year;
+    if (year % 4 == 0) {
+        if (year % 100 == 0) {
+            if (year % 400 == 0) {
+               cout << "Leap year" << endl;
+            }
+            else {
+               cout << "Not a leap year" << endl;
+            }
+        }
+        else {
+            cout << "Leap year" <<endl;
+        }
+    }
+    else {
+        cout << "Not a leap year" << endl;
+    }
+
+
+Exercise 7:
+	double side1, side2, side3;
+
+	cout << " Enter the lengths of three sides of a triangle and checks if it is a valid triangle." << endl;
+		cin >> side1 >> side2 >> side3;
+		if (side1 + side2 > side3 && side3 + side2 > side1 && side1 + side3 > side2)
+			cout << "Valid triangle" << endl;
+		else 
+			cout << "Invalid triangle" << endl;
+
+Exercise 8:
+
+	char ch;
+
+	cout << "enter a character to checks if it is a vowel (a, e, i, o, u) or a consonant." << endl;
+	cin >> ch;
+
+	if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+		cout << "The vovel is (a, e, i, o, u)" << endl;
+	else
+		cout << "it is consonant" << endl;
+
+
+Exercise 10:
+  char letterGrade;
+    double gradePercentage;
+
+    cout << "Enter the grade percentage: ";
+    cin >> gradePercentage;
+
+    if ( gradePercentage >= 90.0) {
+        letterGrade = 'A';
+    }
+    else if (gradePercentage >= 80.0) {
+        letterGrade = 'B';
+    }
+    else if (gradePercentage >= 70.0) {
+        letterGrade = 'C';
+    }
+    else if (gradePercentage >= 60.0) {
+        letterGrade = 'D';
+    }
+    else {
+        letterGrade = 'F';
+    }
+
+   cout << "Letter grade: " << letterGrade << endl;

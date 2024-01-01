@@ -1,0 +1,74 @@
+/*
+	Exercise 1:
+Write a program that prints the numbers from
+1 to 10 using a for loop.
+	*/
+	for (int i = 0; i <= 10; ++i) {
+		cout << i << " ";
+	}
+
+/*
+	Exercise 3:
+Write a program that prints the multiplication table 
+for a given number n up to 10 using a for loop.
+	*/
+	int n;
+	
+
+	cout << "Enter a number to find the multiplication table of the number " << endl;
+	cin >> n;
+
+	for (int i = 1; i <= 10; ++i) {
+	int	result = n * i;
+	cout << n << " x " << i << " = " << result << endl;
+	}
+
+
+	Exercise 4:
+Write a program that prompts
+the user to enter a positive integer
+n and prints the factorial of n using a for loop.
+	*/
+        int n;
+        int factorial = 1;
+
+        cout << "Enter a positive integer: ";
+        cin >> n;
+
+        // Calculate the factorial
+        for (int i = 1; i <= n; i++) {
+            factorial *= i;
+        }
+
+        cout << "Factorial of " << n << " is: " << factorial << endl;
+
+
+
+    /*
+    Exercise 5:
+Write a program that prompts 
+the user to enter a positive integer 
+n and prints the Fibonacci sequence up to the
+nth term using a for loop.
+    */
+        int n;
+
+        cout << "Enter a positive integer: ";
+        cin >> n;
+
+        int term1 = 0;
+        int term2 = 1;
+
+        cout << "Fibonacci Sequence up to the " << n << "th term:" << endl;
+        cout << term1 << " " << term2 << " ";
+
+        for (int i = 3; i <= n; i++) {
+            int nextTerm = term1 + term2;
+            cout << nextTerm << " ";
+
+            term1 = term2;
+            term2 = nextTerm;
+        }
+
+        cout << endl;
+

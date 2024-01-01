@@ -1,0 +1,79 @@
+ //תרגיל 1
+    int now_year = 2023;
+    int age_year;
+    int id;
+    int height;
+    char MorF;
+    bool MF;
+
+    cout << "Enter the age year" << endl;
+    cin >> age_year;
+    age_year = now_year - age_year;
+   //אין צורך בגיל לקלוט אלא צריך לקלוט תאריך לידה ושיוצא פלט של הגיל
+   
+
+    cout << "Enter the id" << endl;
+    cin >> id;
+
+    cout << "Enter the height" << endl;
+    cin >> height;
+
+    cout << "Enter 0 for men or enter 1 for femail " << endl;
+    cin >> MorF;
+
+    cout << "The age is:" << age_year << endl;
+    cout << "The  id is:" << id << endl;
+    cout << "The  height is:" << height << endl;
+    cout << "The kind is:" << (bool)MorF << endl;
+  
+ //תרגיל 2
+    char a = 1, b = 3, c = 7;
+    int x, y, z;
+   
+    cout << "Enter three numbrs" << endl;
+    cin >> a >> b >> c;
+
+    x = a;
+    y = b;
+    z = c;
+    cout << x << y << z << endl;
+
+//תרגיל 3
+    for (char i = 65; i < 91; i++) {
+        cout << i << endl;
+    }
+
+
+//תרגיל 4
+	 double start_price = 10.20;
+  double km_price = 1.30;
+  int b_case = 2;
+  double sum;
+  int km;
+  int briefcase;
+
+
+  cout << "Enter how many km you drive" << endl;
+  cin >> km;
+
+  cout << "Enter how many briefcase you have" << endl;
+  cin >> briefcase;
+
+  km_price = km_price * km;
+  briefcase = briefcase * b_case;
+  sum = km_price + briefcase;
+
+  cout << "The sum that you need to pay for the cab is :" << sum << "$" << endl;
+
+  // תרגיל 5
+    int sores, time, floor;
+
+    cout << "Enter the floor" << endl;
+    cin >> floor;
+
+    time = 5;
+    sores = floor + (3* time);
+
+    cout << "The time is :" << sores << "secents" << endl;
+
+

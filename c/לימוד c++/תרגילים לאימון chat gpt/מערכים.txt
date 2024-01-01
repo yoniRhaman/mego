@@ -1,0 +1,38 @@
+/*
+תרגיל 1: סכום מערך
+כתוב תוכנית שלוקחת מערך של מספרים שלמים כקלט ומחשבת את סכום כל האלמנטים במערך.
+	*/
+	int arr[5], sum = 0;
+	for (int i =0 ; i < 5; i++) {
+		cout << "Enter a number: " << endl;
+		cin >> arr[i];
+		sum += arr[i];
+	}
+	cout << "The sum of all the numbers is: " << sum << endl;
+
+
+	/*
+תרגיל 2: מערך ממוצע
+כתוב תוכנית שלוקחת מערך של מספרים שלמים כקלט ומחשבת את הממוצע של כל האלמנטים במערך.
+	*/
+	int arr[5], averege, total = 0;
+	for (int i = 0; i < 5; i++) {
+		cout << "Enter a number to find the average" << endl;
+		cin >> arr[i];
+		total += arr[i];
+	}
+	averege = total / 5;
+	cout << "The averege of all  numbers " << averege << endl;
+
+	/*
+תרגיל 3: האלמנט הגדול ביותר
+כתוב תוכנית שלוקחת מערך של מספרים שלמים כקלט ומוצאת את האלמנט הגדול ביותר במערך.
+	*/
+	int arr[5], max =0;
+	for (int i = 0; i < 5; i++) {
+		cout << "Enter a number to fide how is the bigest" << endl;
+		cin >> arr[i];
+		if (max < arr[i])
+			max = arr[i];
+	}
+	cout << "The bigest number is: " << max << endl;

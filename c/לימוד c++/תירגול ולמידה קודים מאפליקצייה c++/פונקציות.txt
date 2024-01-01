@@ -1,0 +1,157 @@
+#include <iostream>
+using namespace std;
+//הגדרת פונקצייה
+void greet() {
+    cout << "hello world in function" << endl;
+}
+int main() {
+    // פונקצייה זה בלוק שעושה משימה מסוימת 
+    //חייב שיהיה קריאה כדי שיפעל הפונקצייה
+  
+    //קריאה של הפונקצייה כדי שהיא תתבצע
+    greet();
+
+
+
+    return 0;
+}
+
+
+#include <iostream>
+using namespace std;
+//הגדרת פונקצייה
+//להכניס לטיעון מספר אינט
+void print_num(int number ) {
+    cout << number << endl;
+}
+int main() {
+    //אנחנו יכולים להעביר ערכים מספרים בתוך הפונקצייה
+    //הם נקראים טיעונים
+    int n = 10;
+
+    //להטפיס את nכטיעון 
+    print_num(n);
+    /*
+    1 קריאת הפונקצייה עם המספר נקראת
+    2 הערך מתקבל תחת number בתוכו
+    3 אנחנו מדפיסים את number בפונקצייה
+
+    */
+
+    return 0;
+}
+
+
+#include <iostream>
+using namespace std;
+//לחבר שתי מספרים
+void add_numbers(int num1, int num2) {
+    int sum = num1 + num2;
+    cout << "The sum of the numbers is: " << sum;
+}
+
+int main() {
+    
+
+    add_numbers(6, 8);
+
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+//לחבר שתי מספרים
+  int add_numbers(int num1, int num2) {
+      int sum;
+    sum = num1 + num2;
+    return sum;
+}
+
+int main() {
+    int rerult;
+    //פה אנחנו רואים חזרה של return
+    //עכשיו היא מאוכסנת בתוך result
+    rerult = add_numbers(6, 8);
+
+    cout << "The sum of the numbers is: " << rerult;
+
+    //שינינו את הגדרה למעלה לאינט כדי שתוכל להחזיר את הערך
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+//כתיבת פונקצייה בדאבל
+double add_numbers(double a, double b) {
+    double sum = a + b;
+    return sum;
+}
+int main() {
+    double result;
+    result = add_numbers(3.55, 5.22);
+    cout << "The result is :" << result << endl;
+    //כמו שאתם רואים אפשר להשתמש בפנקצייה כמה פעמים 
+    //במספרים שונים זה המעלה של פונקצייה
+    //זה יותר קריא ומובן
+    //זה נותן לנו תוכנית גדולה לכתיבה להפוך לקטנה
+    result = add_numbers(6.32, 11.25);
+    cout << "The result is :" << result << endl;
+
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+//פונקציה לחיבור וכפל שתי משתנים בפונקציה
+//בקבלת שתי משתנים מהמשתמש
+int add_numbers(int num1, int num2) {
+    int sum = num1 + num2;
+    return sum;
+}
+int mul_numbers(int num1, int num2) {
+    int sum = num1 * num2;
+    return sum;
+}
+
+
+int main() {
+    int result, num1, num2;
+    cout << "Enter two numbers " << endl;
+    cin >> num1 >> num2;
+
+
+    result = add_numbers(num1, num2);
+    cout << "The sum of add numbers is:" << result;
+
+    result = mul_numbers(num1, num2);
+    cout << "The sum of add numbers is:" << result;
+
+
+
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+int check_prime(int num) {
+    if (num == 0 || num == 1)
+        return 0;
+}
+for(int i = 2; i =< num / 2; i++)
+{
+    if (num % i == 0)
+        return 0;
+}
+{return 1;
+}
+
+int main() {
+
+    bool result = check_prime(50);
+    if (result == 1)
+        cout << "this is a prime number";
+    else
+        cout "is not a prime number";
+
+    return 0;
+}

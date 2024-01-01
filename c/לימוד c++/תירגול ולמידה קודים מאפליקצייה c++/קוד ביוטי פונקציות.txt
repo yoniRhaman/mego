@@ -1,0 +1,178 @@
+//שיעור 1
+#include <iostream>
+using namespace std;
+
+void function();
+   
+
+int main() {
+ 
+    cout << "Hello from main()\n";
+    function();
+
+
+
+    return 0;
+}
+void function() {
+    cout << "Hello from function()" << endl;
+}
+
+שיעור 2
+What is function parameter/argument
+
+void introduceMe(string name) {
+    cout << "My name is " << name << endl;
+}
+
+ 
+    introduceMe("yonatan");
+ 
+
+
+
+void introduceMe(string name,string city,int age) {
+    cout << "My name is " << name << endl;
+    cout << "I am from " << city << endl;
+    cout << "I am" << age << " year old" << endl;
+}
+   
+
+int main() {
+ 
+    introduceMe("yonatan","Migdal Aemek",25);
+    introduceMe("necami", "Migdal Aemek", 24 );
+
+
+
+
+void introduceMe(string name,string city,int age) {
+    cout << "My name is " << name << endl;
+    cout << "I am from " << city << endl;
+    cout << "I am " << age << " years old" << endl;
+}
+   
+
+int main() {
+    string name1, city1;
+    int age1;
+    cout << "Name: ";
+    cin >> name1;
+    cout << "City: ";
+     cin >> city1;
+     cout << "Age: ";
+     cin >> age1;
+     introduceMe(name1, city1, age1);
+
+שיעור 3
+Functions return statement, How to check prime number
+
+  //before functions
+    int number;
+    cout << "Number: ";
+    cin >> number;
+
+    bool isPrimeFlag = true;
+    for (int i = 2; i < number; i++) {
+        if (number % i == 0) {
+            isPrimeFlag = false;
+            break;
+        }
+    }
+    if (isPrimeFlag)
+        cout << "Prime number" << endl;
+    else
+        cout << "Not Prime number" << endl;
+
+
+#include <iostream>
+using namespace std;  
+
+bool isPrimeNumber(int number) {
+    bool isPrimeFlag = true;
+    for (int i = 2; i < number; i++) {
+        if (number % i == 0) {
+            isPrimeFlag = false;
+            break;
+        }
+    }
+    return isPrimeFlag;
+}
+int main() {
+
+    int number;
+    cout << "Number: ";
+    cin >> number;
+
+    bool isPrimeFlag = isPrimeNumber(number);
+
+    if (isPrimeFlag)
+        cout << "Prime number" << endl;
+    else
+        cout << "Not Prime number" << endl;
+
+    return 0;
+}
+
+
+שינוי קטן בחזרה עושה את הקוד יותר קריא
+
+
+bool isPrimeNumber(int number) {
+    bool isPrimeFlag = true;
+    for (int i = 2; i < number; i++) {
+        if (number % i == 0)
+            return false;
+    }
+    return true;
+}
+
+מציאת המספר הראשוני בקריאה לפונקצייה בלולאה מהמיין
+#include <iostream>
+using namespace std;
+
+bool isPrimeNumber(int number) {
+    bool isPrimeFlag = true;
+    for (int i = 2; i < number; i++) {
+        if (number % i == 0)
+            return false;
+    }
+    return true;
+}
+int main() {
+
+    for (int i = 0; i <= 1000; i++) {
+        bool isPrime = isPrimeNumber(i);
+        if (isPrime)
+            cout << i << " is prime number\n";
+    }
+
+    return 0;
+}
+
+שיעור מספר 4
+ What is function overloading
+
+#include <iostream>
+using namespace std;
+
+int sum(int a, int b);
+double sum(double a, double b);
+float sum(float a, float b, float c);
+
+int main() {
+    cout << sum(4, 3) << endl;
+    cout << sum(4.3, 3.3) << endl;
+    cout << sum(3.3,4.4,2.1) <<endl;
+
+    return 0;
+}
+int sum(int a, int b) {
+    return a + b;
+}
+double sum(double a, double b) {
+    return a + b;
+}
+float sum(float a, float b, float c) {
+    return a + b + c;
+}
