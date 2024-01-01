@@ -1,0 +1,38 @@
+db.car.insert([
+   {
+     name: "Toyota Yaris",
+     ID_number: "3253455753",
+     price: "25K$",
+     Year_of_manufacture: "2019",
+     car_type: "family_car"
+   },
+   {
+     name: "Toyota Camry",
+     ID_number: "3123132124",
+     price: "30K$",
+     Year_of_manufacture: "2022",
+     car_type: "family_car"
+   },
+   {
+     name: "Toyota Vellfire",
+     ID_number: "1242134324",
+     price: "40K$",
+     Year_of_manufacture: "2022",
+     car_type: "Electric_car"
+   },
+   {
+     name: "Toyota Urban Cruiser Hyryder",
+     ID_number: "43242353253",
+     price: "40K$",
+     Year_of_manufacture: "2022",
+     car_type: "Electric_car"
+   },
+   {
+     name: "Toyota Hilux",
+     ID_number: "43323232423",
+     price: "45K$",
+     Year_of_manufacture: "2022",
+     car_type: "jeep"
+   }
+ ]);
+ 

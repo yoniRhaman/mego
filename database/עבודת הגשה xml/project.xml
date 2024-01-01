@@ -1,0 +1,63 @@
+<!DOCTYPE Toyota [
+<!ELEMENT Toyota (car+)>
+<!ELEMENT car (name,ID_number,price,Year_of_manufacture,car_type)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT ID_number (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT Year_of_manufacture (#PCDATA)>
+<!ELEMENT car_type (#PCDATA)>
+
+]>
+
+<Toyota>
+    <car>
+        <name>Toyota Yaris</name>
+        <ID_number>3253455753</ID_number>
+        <price>25K$</price>
+        <Year_of_manufacture>2019</Year_of_manufacture>
+        <car_type>family_car</car_type>
+    </car>
+    <car>
+        <name>Toyota Camry </name>
+        <ID_number>3123132124</ID_number>
+        <price>30K$</price>
+        <Year_of_manufacture>2022</Year_of_manufacture>
+        <car_type>family_car</car_type>
+    </car>
+    <car>
+        <name>Toyota Vellfire</name>
+        <ID_number>1242134324</ID_number>
+        <price>50K$</price>
+        <Year_of_manufacture>2020</Year_of_manufacture>
+        <car_type>ven</car_type>
+    </car>
+    <car>
+        <name>Toyota Urban Cruiser Hyryder </name>
+        <ID_number>3432543543</ID_number>
+        <price>40K$</price>
+        <Year_of_manufacture>2022</Year_of_manufacture>
+        <car_type>Electrice car</car_type>
+    </car>
+    <car>
+        <name>Toyota Hilux </name>
+        <ID_number>43242353253</ID_number>
+        <price>35K$</price>
+        <Year_of_manufacture>2022</Year_of_manufacture>
+        <car_type>Jeep</car_type>
+    </car>
+    
+</Toyota>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
