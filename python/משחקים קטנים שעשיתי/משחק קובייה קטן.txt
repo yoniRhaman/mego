@@ -1,0 +1,114 @@
+import pygame
+
+pygame.init()
+#הצהרת משתנים כדי ליצור מימד
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+#משתנה שמכיל בתוכו פונקצייה להפעלת המסך
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+
+#ניצור אפשרות ביעה למך
+player = pygame.Rect((300,250,50,50))
+
+#משתנה בשביל התנאי
+run = True
+#לולאה כדי שהמסך ימשיך לפעול
+while run:
+    #ריענון לשחור אחרי כל תנועה של הקוביה
+    screen.fill((0,0,0))
+    #ליצור קובייה ע"י צביאה
+    pygame.draw.rect(screen,(255,0,0),player)
+
+    #יוצר את השליטה על הקובייה ע"י תזוזה
+    #יצירת פונקצייה כדי לדעת איזה מקש נלחץ לתזוזה
+    # השמאל תזוזה לצד  של הx וימין לצד הy
+    key =pygame.key.get_pressed()
+    if key[pygame.K_a] == True:
+        player.move_ip(-1,0)
+    elif key[pygame.K_d] == True:
+        player.move_ip(1, 0)
+    elif key[pygame.K_w] == True:
+        player.move_ip(0,-1)
+    elif key[pygame.K_s] == True:
+        player.move_ip(0,1)
+
+     #לולאה עם event כדי שיקלוט לחיצה של עכבר לצאת
+    for event in pygame.event.get():
+        #התנאי כדי לצאת
+        if event.type == pygame.QUIT:
+            run = False
+
+    pygame.display.update()
+
+pygame.quit()
+
+
+
+
+
+
+שיפור למשחק הראשון
+
+import pygame
+import sys
+
+# Initialize Pygame
+pygame.init()
+
+# Screen dimensions
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+
+# Colors
+BLACK = (0, 0, 0)
+RED = (255, 0, 0)
+
+# Create the screen
+screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+pygame.display.set_caption("Improved Pygame Game")
+
+# Player settings
+player = pygame.Rect(300, 250, 50, 50)
+player_speed = 5
+
+# Game clock
+clock = pygame.time.Clock()
+
+# Main game loop
+run = True
+while run:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            run = False
+
+    # Get key presses for player movement
+    keys = pygame.key.get_pressed()
+    if keys[pygame.K_a]:
+        player.x -= player_speed
+    if keys[pygame.K_d]:
+        player.x += player_speed
+    if keys[pygame.K_w]:
+        player.y -= player_speed
+    if keys[pygame.K_s]:
+        player.y += player_speed
+
+    # Boundary checking to keep the player on the screen
+    player.x = max(0, min(player.x, SCREEN_WIDTH - player.width))
+    player.y = max(0, min(player.y, SCREEN_HEIGHT - player.height))
+
+    # Clear the screen
+    screen.fill(BLACK)
+
+    # Draw the player
+    pygame.draw.rect(screen, RED, player)
+
+    # Update the display
+    pygame.display.update()
+
+    # Cap the frame rate
+    clock.tick(60)
+
+# Quit the game
+pygame.quit()
+sys.exit()
+

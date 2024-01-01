@@ -1,0 +1,37 @@
+print("ברוכים הבאים למשחק הקטן שעשיתי!!")
+
+playing =input("אתה רוצה לשחק?  ")
+
+if playing != "כן":
+    quit()
+
+print("אוקיי אחלה בו נתחיל לשחק :) ")
+score = 0
+
+answer = input("כמה ימים יש בשנה? ")
+if answer == "365":
+    print("נכון איזה חכם אתה")
+    score +=1
+else:
+    print("אחי זה לא נכון")
+answer = input("כמה ימים יש בשנה? ")
+if answer == "365":
+    print("נכון איזה חכם אתה")
+    score += 1
+else:
+    print("אחי זה לא נכון")
+answer = input("כמה ימים יש בשנה? ")
+if answer == "365":
+    print("נכון איזה חכם אתה")
+    score += 1
+else:
+    print("אחי זה לא נכון")
+answer = input("כמה ימים יש בשנה? ")
+if answer == "365":
+    print("נכון איזה חכם אתה")
+    score += 1
+else:
+    print("אחי זה לא נכון")
+
+print("אתה קיבלת ניקוד של " + str(score) + " תשובות נכונות")
+print("אתה קיבלת ניקוד של " + str((score / 4) * 100) + " %")
