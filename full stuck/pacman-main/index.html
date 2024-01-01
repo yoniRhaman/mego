@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Set the character set to UTF-8 -->
+    <meta charset="UTF-8" />
+    <!-- Ensure proper rendering and compatibility with Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Set the viewport for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Set the title of the webpage -->
+    <title>Pac-Man</title>
+    <!-- Define the style for the webpage -->
+    <style>
+      /* Add box shadow to the gameCanvas element */
+      #gameCanvas {
+        box-shadow: 10px 10px 20px black;
+      }
+      /* Style for the h1 element (Pac-Man title) */
+      h1 {
+        text-align: center;
+        font-family: comic sans MS;
+        color: lightgrey;
+      }
+      /* Style for the body element */
+      body {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        height: 100vh;
+        /* Set a linear gradient background */
+        background: linear-gradient(
+          0deg,
+          rgb(17, 51, 161) 0%,
+          rgb(136, 34, 195) 100%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Container for the Pac-Man title and gameCanvas -->
+    <div>
+      <!-- Pac-Man title -->
+      <h1>Pac-Man</h1>
+      <!-- Canvas element for the game -->
+      <canvas id="gameCanvas"></canvas>
+    </div>
+    <!-- Include the JavaScript file for the game -->
+    <script src="src/Game.js" type="module"></script>
+  </body>
+</html>
