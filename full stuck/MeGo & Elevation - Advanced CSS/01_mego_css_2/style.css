@@ -1,0 +1,10 @@
+.container{
+    border:1px solid black ;
+    height: 600px;
+    width:600px;
+    padding: 10px;
+}
+.container .sub-container:nth-child(1){
+    background-color: blue;
+    margin: 5px;
+}

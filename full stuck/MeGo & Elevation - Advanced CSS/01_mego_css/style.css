@@ -1,0 +1,12 @@
+.box{
+    background-color: blue;
+    margin: 10px 5px 2px 50px;
+    padding: 10px;
+}
+.sub-container .container .box{
+    background-color: yellow;
+}
+.box:nth-child(2){
+    background-color: red;
+    margin: 200px;
+}

@@ -1,0 +1,21 @@
+/* flexbox */
+/* הוא עובד רק הורה ישיר */
+.nav-container ul{
+list-style-type: none;
+display: flex;
+flex-direction: row;
+}
+.box-container{
+    height: 500px;
+    width: 500px;
+    border: 2px solid black;
+    display: flex;
+}
+.box-continer .box{
+    height: 100px;
+    width: 100px; 
+}
+.nav-container .box:nth-child(1){
+    background-color: blue;
+    color: black;
+}
