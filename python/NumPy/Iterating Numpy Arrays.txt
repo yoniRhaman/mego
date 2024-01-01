@@ -1,0 +1,31 @@
+#Iterating Numpy Arrays
+#Sampel Code
+''''
+import numpy as np
+
+arr =np.array([1,2,3])
+
+for x in arr:
+    print(x)
+#Iterating 2-D Arrays
+arr =np.array([[1,2,3],[4,5,6]])
+
+for x in arr:
+    print(x)
+#Iterating on each scalar element of 2-D Arrays
+arr =np.array([[1,2,3],[4,5,6]])
+
+for x in arr:
+    for y in x:
+        print(y)
+'''
+#practice
+import numpy as np
+arr = np.array([1,2,3])
+for i in arr:
+    print(i)
+
+arr2 =np.array([[1,2,3],[4,5,6]])
+for j in arr2:
+    for k in j:
+        print(k)

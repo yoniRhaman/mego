@@ -1,0 +1,25 @@
+''''
+import numpy as np
+arr = np.array([1,2,3,4,5])#1-D array
+print(arr)
+print(type(arr))
+
+import numpy as np
+arr = np.array([[1,2,3],[4,5,6]])#2-D array
+print(arr)
+
+import numpy as np
+arr = np.array([[[1,2,3],[4,5,6],[7,8,9]]])#3-D arrays
+print(arr)
+
+import numpy as np
+a = np.array(42)
+b = np.array([1,2,3,4,5])
+c = np.array([[1,2,3],[4,5,6]])
+d = np.array([[[1,2,3],[4,5,6],[1,2,3],[4,5,6]]])
+#Check how many dimensions the arrays have
+print(a.ndim)#o/p 0
+print(b.ndim)#o/p 1
+print(c.ndim)#o/p 2
+print(d.ndim)#o/p 3
+'''

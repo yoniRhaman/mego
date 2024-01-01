@@ -1,0 +1,50 @@
+''''
+#Shape of Array
+import numpy as np
+arr = np.array([[1,2,3,4],[5,6,7,8]])
+print(arr.shape)
+
+#Reshping arrays
+import numpy as np
+#convert 1-D array into 2-D array.
+arr = np.array([1,2,3,4,5,6,7,8,9,10,11,12])
+
+newarr =arr.reshape(4,3)
+print(newarr)
+#O/P[[ 1  2  3]
+# [ 4  5  6]
+#[ 7  8  9]
+#[10 11 12]]
+
+import numpy as np
+#Flattening the arrays
+#convert 2-D array or more into 1-D array.
+#we ues reshape(-1)
+import numpy as py
+arr = np.array([[1,2,3],[4,5,6]])
+newarr = arr.reshape(-1)
+print(newarr)#[1 2 3 4 5 6]
+'''
+
+
+
+#practice
+import numpy as np
+a = np.array([1,2,3,4,5])
+print(a.shape)#(5,)
+
+b = np.array([[1,2,3,4],[5,6,7,8]])
+print(b.shape)#(2, 4)
+
+c = np.array([1,2,3,4,5,6,7,8,9,10,11,12])
+new_arr = c.reshape(4,3)
+print(new_arr)
+print(c.shape)
+new_arr2 =c.reshape(2,3,2)
+print(new_arr2)
+print(new_arr2.shape)
+
+twoD_array = np.array([[1,2,3],[4,5,6]])
+flatten_array =twoD_array.reshape(-1)
+print(flatten_array)
+print(flatten_array.shape)
