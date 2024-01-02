@@ -1,0 +1,214 @@
+
+#include<stdio.h>
+#include<math.h>
+
+
+
+void main() {
+	// איתחול מערכים
+	//int ages[10];
+	//ages[0] = 23;
+	//printf("%d\n", ages[0]);
+	//printf("%d\n", sizeof(char));
+	//printf("%d\n", sizeof(int));
+	//printf("%d\n", sizeof(ages[0]));
+	//printf("%d\n", sizeof(ages));
+
+	 
+	//int arr[3] = { 5,9,7 };
+	//int arr[] = { 5,9,7,1,3};
+	//int arr[3] = { 0 };
+
+	//קליטת מערכים בנפרד
+	//int arr[3];
+
+	//for (int i = 0; i < 3; i++) {
+	//	scanf_s("%d",&arr[i]);
+	//}
+
+
+	
+}
+
+
+
+
+#include<stdio.h>
+#include<math.h>
+
+
+
+void main() {
+	//מציאת מספר הכי גדול במערך
+	int arr[10];
+	int max = 0;
+	for (int i = 0; i < 10; i++) {
+		scanf_s("%d",&arr[i]);
+		if (arr[i] > max)
+			max = arr[i];
+	}
+	max = arr[0];
+	for (int i = 1; i < 10; i++) {
+		if (arr[i] > max)
+			max = arr[i];
+	}
+	printf("The max number is: %d \n", max);
+}
+
+
+
+
+שאלה 38 - סדר הפוך
+יש לאתחל מערך של מספרים שלמים ב- 13 מספרים שלמים בשיטת הקצאה ע"י איתחול. יש לשלוח את המערך וגודלו לפונקציה אשר תציג את אברי המערך בסדר הפוך.
+
+
+#include<stdio.h>
+#include<stdlib.h>
+
+void ChangeDirection(int arr[], int size) {
+    for(int i = size-1;i >= 0; i--){
+    printf("%d\n",arr[i]);
+    
+    }
+   	
+}
+ 
+
+void main() {
+ 
+   	int arr[] = {1,2,3,4,5,6,7,8,9,10,11,12,13};
+    int size =sizeof(arr) / sizeof(arr[0]);
+    ChangeDirection(arr,size);
+    
+}
+
+
+
+שאלה 40 - מציאת מקסימום במערך 
+יש לכתוב תוכנית ובה מערך בעל 5 תאים של מספרים שלמים. יש לקלוט 5 מספרים שלמים מן המשתמש לתוך המערך ולאחר מכן יש להוציא לפלט את האבר הגדול ביותר במערך.
+* יש להניח כי קיים מקסימום אחד בלבד במערך.
+* איך נפתור את השאלה מבלי לאתחל את המשתנה המייצג את המקסימום באחד מן הערכים במערך.
+ניתן לייבא את limits.h ולהשתמש בקבוע INT_MIN המייצג את הערך המינימאלי של מספר שלם מטיפוס int.
+
+
+#include<stdio.h>
+#include<math.h>
+
+
+
+void main() {
+	//מציאת מספר הכי גדול במערך
+	int arr[5];
+	int max = 0;
+	for (int i = 0; i < 5; i++) {
+		printf("Plz enter a number to see how hight: ");
+		scanf_s("%d", &arr[i]);
+		if (arr[i] > max)
+			max = arr[i];
+	}
+	max = arr[0];
+	for (int i = 1; i < 5; i++) {
+		if (arr[i] > max)
+			max = arr[i];
+	}
+	printf("The max number is: %d \n", max);
+}
+
+
+
+#include<stdio.h>
+#include<math.h>
+
+void main() {
+    // Finding the largest number in the array
+    int arr[5];
+    int max = 0;
+
+    for (int i = 0; i < 5; i++) {
+        printf("Please enter a number:\n");
+        scanf_s("%d", &arr[i]);
+
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+
+    printf("The largest number is: %d\n", max);
+}
+
+
+שאלה 41 - מערך ציונים
+יש לאתחל מערך של מספרים שלמים ב- 13 מספרים שלמים המייצגים ציוני סטודנטים במספרים אקראיים (בין 40 ל- 100). יש לכתוב 2 פונקציות:
+הראשונה, מקבלת מערך ואת גודלו ומציגה את אבריו לפלט.
+השניה, מקבלת מערך ואת גודלו ומשמשת כפקטור (הגדלת הציון ב-7 נקודות לכלל הסטודנטים) במידה והממוצע הוא נכשל.
+סטודנט לא יכול לקבל יותר מ-100.
+
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+#define SIZE 13
+int show_arr(int arr[], int size);
+
+void main() {
+
+	srand(time(NULL));
+
+	int grades_arr[SIZE], i;
+
+	for (int i = 0; i < SIZE; i++) {
+		grades_arr[i] = rand() % 101;
+	}
+	
+	
+}
+int show_arr(int arr[], int size) {
+	for(int i = 0; )
+}
+
+
+שאלה 43 - מספר החוזר על עצמו 
+יש לכתוב תוכנית ובה פונקציה אשר מקבלת כפרמטר מערך של מספרים שלמים ואת אורך המערך ומחזירה את המספר שחוזר על עצמו הכי הרבה פעמים במערך.
+ * ניתן להניח כי קיים רק אחד כזה.
+* האבר הגדול ביותר האפשרי הוא 100.
+ב- main יש ליצור מערך בשיטת הקצאה ע"י אתחול ולהפעיל את הפונקציה.
+* ניתן (ומומלץ) לחלק את הפתרון למספר פונקציות ע"פ הצורך.
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+#define SIZE 10
+
+int most_number(int arr[], int size);
+
+int main() {
+    int arr[] = { 50, 20, 30, 70, 40, 20, 89, 20, 70, 99 };
+    int result = most_number(arr, SIZE);
+    printf("The most common number is: %d\n", result);
+    return 0;
+}
+
+int most_number(int arr[], int size) {
+    int maxCount = 0;
+    int mostCommon = arr[0];
+
+    for (int i = 0; i < size; i++) {
+        int counter = 0;
+
+        for (int j = 0; j < size; j++) {
+            if (arr[i] == arr[j]) {
+                counter += 1;
+            }
+        }
+
+        if (counter > maxCount) {
+            maxCount = counter;
+            mostCommon = arr[i];
+        }
+    }
+
+    return mostCommon;
+}
+

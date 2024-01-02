@@ -1,0 +1,131 @@
+
+שאלה 28 - מחלקים
+יש לכתוב פונקציה המקבלת כפרמטר מספר שלם ומציגה את המחלקים שלו. ב- main יש לקלוט מספר שלם מן המשתמש ולשלוח אותו לפונקציה.
+
+#include <iostream>
+
+// פונקציה שמציגה את המחלקים של מספר שלם
+void displayFactors(int num) {
+    std::cout << "המחלקים של המספר " << num << " הם: ";
+    for (int i = 1; i <= num; i++) {
+        if (num % i == 0) {
+            std::cout << i << " ";
+        }
+    }
+    std::cout << std::endl;
+}
+
+int main() {
+    int number;
+    
+    std::cout << "אנא הזן מספר שלם: ";
+    std::cin >> number;
+
+    // שליחת המספר לפונקציה להצגת המחלקים
+    displayFactors(number);
+
+    return 0;
+}
+
+
+שאלה 29 - מספר ראשוני
+יש לכתוב פונקציה המקבלת כפרמטר מספר שלם ומציגה האם הוא ראשוני או לא. ב- main יש לקלוט מספר שלם מן המשתמש ולשלוח אותו לפונקציה.
+
+
+#include <stdio.h>
+
+// פונקציה שבודקת אם מספר הוא מספר ראשוני
+void checkPrime(int num) {
+    if (num <= 1) {
+        printf("%d אינו מספר ראשוני.\n", num);
+    } else {
+        int isPrime = 1;  // משתנה בוליאני שנשמר כי מספר ראשוני עד שנמצא סיבוב שמחלק אותו
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) {
+                isPrime = 0;  // המספר אינו ראשוני
+                break;
+            }
+        }
+        if (isPrime) {
+            printf("%d הוא מספר ראשוני.\n", num);
+        } else {
+            printf("%d אינו מספר ראשוני.\n", num);
+        }
+    }
+}
+
+int main() {
+    int number;
+
+    printf("אנא הזן מספר שלם: ");
+    scanf("%d", &number);
+
+    // שליחת המספר לפונקציה לבדיקה האם הוא מספר ראשוני
+    checkPrime(number);
+
+    return 0;
+}
+
+
+שאלה 30 - משולש חוקי
+יש לקלוט 3 מספרים שלמים מן המשתמש המייצגים אורך צלעות של משולש. יש לשלוח את המספרים שנקלטו לפונקציה אשר מציגה לפלט האם האם המשולש חוקי או לא. משולש חוקי הוא משולש שסכום כל שתי צלעות שבו גדול מן האורך של הצלע השלישית.
+
+
+#include <stdio.h>
+
+// פונקציה שבודקת האם משולש חוקי
+int isTriangleValid(int a, int b, int c) {
+    return (a + b > c) && (a + c > b) && (b + c > a);
+}
+
+int main() {
+    int side1, side2, side3;
+
+    printf("אנא הזן אורך של צלע ראשונה: ");
+    scanf("%d", &side1);
+
+    printf("אנא הזן אורך של צלע שנייה: ");
+    scanf("%d", &side2);
+
+    printf("אנא הזן אורך של צלע שלישית: ");
+    scanf("%d", &side3);
+
+    // בדיקה האם המשולש חוקי והדפסת התוצאה
+    if (isTriangleValid(side1, side2, side3)) {
+        printf("המשולש הוא משולש חוקי.\n");
+    } else {
+        printf("המשולש אינו משולש חוקי.\n");
+    }
+
+    return 0;
+}
+
+
+שאלה 31 - עצרת
+עצרת היא תוצאת המכפלה של המספרים העוקבים עד המספר. לדוגמא, העצרת של 5 היא 120 (1*2*3*4*5). יש לכתוב תוכנית הקולטת מספר שלם מן המשתמש ושולחת אותו לפונקציה המציגה לפלט את העצרת שלו.
+
+
+#include <stdio.h>
+
+// פונקציה שמחשבת עצרת (גורםיית) של מספר
+int calculateFactorial(int num) {
+    int factorial = 1;
+    for (int i = 1; i <= num; i++) {
+        factorial *= i;
+    }
+    return factorial;
+}
+
+int main() {
+    int number;
+
+    printf("אנא הזן מספר שלם: ");
+    scanf("%d", &number);
+
+    // שליחת המספר לפונקציה לחישוב העצרת
+    int result = calculateFactorial(number);
+
+    printf("העצרת של %d היא: %d\n", number, result);
+
+    return 0;
+}

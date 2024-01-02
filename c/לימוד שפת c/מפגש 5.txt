@@ -1,0 +1,108 @@
+שאלה 17 - המספר הגבוה ביותר
+#include<stdio.h> 
+void main() {
+
+    // declare vars
+    int i;
+    int high_number = 0;
+    int number;
+    
+    for (i = 1;i <= 10; i++) {
+        printf("Enter a number: ");
+        scanf_s("%d", &number);
+        if (number > high_number)
+            high_number = number;
+    }
+    printf("The highest number is: %d", high_number);
+}
+
+
+שאלה 18 - מחלקים משותפים
+
+#include <stdio.h>
+
+void main() {
+    int num1, num2;
+
+    printf("Enter two integers (the first should be smaller): ");
+    scanf("%d %d", &num1, &num2);
+
+    if (num1 <= 0 || num2 <= 0) {
+        printf("Both numbers should be positive integers.\n");
+    }
+    else if (num1 > num2) {
+        printf("The first number should be smaller than the second.\n");
+    }
+    else {
+        printf("Common divisors of %d and %d are: ", num1, num2);
+
+        for (int i = 1; i <= num1; i++) {
+            if (num1 % i == 0 && num2 % i == 0) {
+                printf("%d ", i); // הדפס מספרים שמתחלקים בשני המספרים
+            }
+        }
+
+        printf("\n");
+    }
+
+}
+
+שאלה 19 - חישוב חזקה
+
+#include <stdio.h>
+
+int main() {
+    int base, exponent;
+    long long result = 1;  // התוצאה תהיה מספר שלם גדול, נשתמש ב- long long
+    int i;
+    printf("Enter base: ");
+    scanf_s("%d", &base);
+
+    printf("Enter exponent: ");
+    scanf_s("%d", &exponent);
+
+    if (exponent < 0) {
+        printf("Exponent should be non-negative.\n");
+    }
+    else {
+        for (i = 1; i <= exponent; i++) {
+            result *= base;  // כל פעם כאשר אנחנו עוברים על הלולאה, אנחנו מכפילים את התוצאה בבסיס
+        }
+
+        printf("%d raised to the power of %d is %lld\n", base, exponent, result);
+    }
+
+    return 0;
+}
+שאלה 20 חיובי שלילי
+#include<stdio.h> 
+void main() {
+
+    // declare vars
+    int i;
+    int total = 0;
+    int number;
+
+    for (i = 1; i <= 10; i++) {
+        printf("Enter a number: ");
+        scanf_s("%d", &number);
+        total += number;
+       
+    }
+    if (total == 0) {
+        printf("Its even");
+            
+   }
+    else if (total < 0) {
+        printf("Its negetive");
+    }
+    else
+    {
+        printf("Its posetive");
+    }
+}
+
+
+
+
+

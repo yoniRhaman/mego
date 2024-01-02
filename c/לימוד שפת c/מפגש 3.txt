@@ -1,0 +1,164 @@
+שאלה 6 - ציוני סטודנט
+
+#include <stdio.h>
+
+void main() {
+    int grade1, grade2, grade3, average;
+
+    printf("Enter first grade number: ");
+
+    scanf_s("%d", &grade1);
+
+    printf("Enter secend grade number: ");
+
+    scanf_s("%d", &grade2);
+
+    printf("Enter third grade number: ");
+
+    scanf_s("%d", &grade3);
+
+    average = (grade1 + grade2 + grade3) / 3;
+
+        if(average >= 90)
+            printf("Excellent");
+       
+        if (average < 55)
+            printf("It must be shown that the grades need to be improved.");
+ 
+    
+}
+
+שאלה 7 - הוצאות
+
+#include <stdio.h>
+
+void main() {
+	double average_per_month, average_year;
+	
+	printf("please enter Average expenditure per family per month ");
+	scanf_s("%lf", & average_per_month);
+
+	average_year = average_per_month * 12;
+	
+	if (average_year >= 100000)
+		printf("Its big then 100000");
+
+	if (average_year < 100000)
+		printf("Its les then 10000");
+}
+
+שאלה 8-סחורה
+#include <stdio.h>
+//שאלה 8 - סחורה
+void main() {
+	int number_unit;
+	double unit_price, tax =0.17,total;
+	
+	printf("please enter unit price ");
+	scanf_s("%lf", & unit_price);
+
+
+	printf("please enter unit number ");
+	scanf_s("%d", & number_unit);
+	total = (number_unit * unit_price) + tax * unit_price;
+
+	printf("The total price whit tax is %lf  ", total);
+
+	if (total > 10000)
+		printf("It is big then 10000");
+	else
+		printf("It is lese then 10000");
+	
+}
+
+
+
+שאלה 9 - מעבר קורס
+
+
+
+#include <stdio.h>
+
+void main() {
+    int grade1, grade2, grade3, average;
+
+    printf("Enter first grade number: ");
+
+    scanf_s("%d", &grade1);
+
+    printf("Enter secend grade number: ");
+
+    scanf_s("%d", &grade2);
+
+    printf("Enter third grade number: ");
+
+    scanf_s("%d", &grade3);
+
+    average = (grade1 + grade2 + grade3) / 3;
+
+    if (average <= 65)
+        printf("You failed and you not pass");
+    else
+        printf("You pass the cours");
+
+}
+
+
+שאלה 10 - גיל מותאם לסרט
+
+
+#include <stdio.h>
+
+void main() {
+    int age1, age2, age3;
+
+    printf("Enter your age number: ");
+
+    scanf_s("%d", &age1);
+
+    printf("Enter your age number: ");
+
+    scanf_s("%d", &age2);
+
+    printf("Enter your age number: ");
+
+    scanf_s("%d", &age3);
+
+   
+
+    if (age1 >= 18 && age2 >= 18 && age3 >= 18)
+        printf("You can go to the movie");
+    else
+        printf("You can't go to the movie");
+
+}
+
+שאלה 11 - משולש חוקי
+
+#include <stdio.h>
+
+int main() {
+    int side1, side2, side3;
+
+    // Input lengths of three sides from the user
+    printf("Enter the length of the first side: ");
+    scanf("%d", &side1);
+
+    printf("Enter the length of the second side: ");
+    scanf("%d", &side2);
+
+    printf("Enter the length of the third side: ");
+    scanf("%d", &side3);
+
+    // Check if the triangle is valid
+    if (side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1) {
+        printf("The triangle is valid.\n");
+    } else {
+        printf("The triangle is not valid.\n");
+    }
+
+    return 0;
+}
+
+
+

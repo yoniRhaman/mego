@@ -1,0 +1,116 @@
+שאלה 22 - קלט עד 100
+
+#include <stdio.h>
+
+int main() {
+    int number = 0;
+    int counter = 0;
+    int sum = 0;
+
+    while (sum < 100) {
+        printf("Please enter a number: ");
+        scanf_s("%d", &number);  
+        sum += number;
+        counter++;
+    }
+
+    printf("The total counter is: %d\n", counter);
+
+    return 0;
+}
+
+שאלה 23 - מחלקים אחד בשני
+
+#include <stdio.h>
+
+int main() {
+    int number1 = 0;
+    int number2 = 0;
+
+    printf("Please enter two numbers: ");
+    scanf("%d %d", &number1, &number2);
+
+    while (number1 % number2 != 0) {
+        printf("Please enter two numbers: ");
+        scanf("%d %d", &number1, &number2);
+    }
+
+    printf("You succeeded with the program.\n");
+
+    return 0;
+}
+
+שאלה 24 - פולינדרום
+
+#include <stdio.h>
+
+int main() {
+    int num, reversedNum = 0, originalNum, remainder;
+
+    printf("Please enter a whole number: ");
+    scanf_s("%d", &num);
+
+    originalNum = num; //101 
+
+    
+    while (num != 0)
+    {
+        remainder = num % 10;//1234321 , 1
+        reversedNum = reversedNum * 10 + remainder;
+        num /= 10;
+    }
+
+  
+    if (originalNum == reversedNum) {
+        printf("%d you got polidrom\n", originalNum);
+    }
+    else {
+        printf("%d you not have polidrom.\n", originalNum);
+    }
+
+    return 0;
+}
+שאלה 26
+#include <stdio.h>
+
+int main() {
+    int number;
+
+    // הכנסת מספר שלם מהמשתמש
+    printf("אנא הזן מספר שלם: ");
+    scanf("%d", &number);
+
+    // מציאת הספרות הגדולה והקטנה במספר
+    int max_digit = -1;  // הספרה הגדולה ביותר (מתחילה מערך שאינו ספרה חוקית)
+    int min_digit = 10;  // הספרה הקטנה ביותר (מתחילה מערך שאינו ספרה חוקית)
+
+    int temp = number;  // משתנה זמני לבדיקת הספרות
+
+    while (temp > 0) {
+        int digit = temp % 10;  // משיכת הספרה האחרונה מהמספר
+        if (digit > max_digit) {
+            max_digit = digit;
+        }
+        if (digit < min_digit) {
+            min_digit = digit;
+        }
+        temp /= 10;  // הסרת הספרה האחרונה מהמספר
+    }
+
+    if (max_digit != -1) {
+        int difference = max_digit - min_digit;
+        printf("ההפרש בין הספרה הגדולה ביותר לספרה הקטנה ביותר במספר %d הוא: %d\n", number, difference);
+    } else {
+        printf("המספר שהוזן הוא 0, ולכן אין הפרש בין ספרות כי אין ספרות במספר 0.\n");
+    }
+
+    return 0;
+}
+שאלה 27
+
+
+
+
+
+
+

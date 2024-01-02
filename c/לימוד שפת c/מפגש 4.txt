@@ -1,0 +1,70 @@
+שאלה 12
+#include <stdio.h>
+
+void main() {
+ 
+//שאלה 12 לולאה
+  
+  int i = 100;
+  for (i = 100; i <= 200; i += 2) {
+      printf("%d  ",i);
+    }
+}
+    
+שאלה 13
+#include <stdio.h>
+
+void main() {
+ 
+
+  
+  double i = 0;
+  for (double i = 0; i <= 5; i += 0.5) {
+      printf("%.2lf  ",i);
+    }
+}
+    
+שאלה 14
+
+#include <stdio.h>
+
+int main() {
+    int total = 0; // Variable to store the total sum of grades
+
+    // Input and calculate total using a for loop
+    for (int i = 1; i <= 7; i++) {
+        int grade;
+        printf("Enter grade %d: ", i);
+        scanf("%d", &grade);
+        total += grade;
+    }
+
+    // Calculate the average
+    float average = (float)total / 7;
+
+    // Display the average
+    printf("The average grade is: %.2f\n", average);
+
+    return 0;
+}
+
+שאלה 15
+
+#include <stdio.h>
+
+int main() {
+    int number;
+    int factorial = 1;
+
+    printf("Enter an integer: ");
+    scanf("%d", &number);
+
+    // Calculate the factorial
+    for (int i = 1; i <= number; i++) {
+        factorial *= i;
+    }
+
+    printf("The factorial of %d is: %d\n", number, factorial);
+
+    return 0;
+}

@@ -1,0 +1,227 @@
+דוגמא של פונקציות מובנות שמקבלות פרמטר ומדפיסות אותם
+
+#include<stdio.h>
+#include<math.h>
+
+
+void main() {
+
+    double num1 = pow(2, 3);
+    double num2 = sqrt(100);
+
+    printf("num1=%.2lf  num2=%.2lf", num1, num2);
+
+}
+
+
+למצוא את המספר הכי גדול
+
+
+#include<stdio.h>
+#include<math.h>
+
+int Big(int val1, int val2, int val3);
+
+
+
+
+void main() {
+	int num1, num2, num3;
+
+	printf("Plz enter 3 numbers to see how is hight:\n ");
+	scanf_s("%d%d%d", &num1, &num2, &num3);
+	printf("The big number is: %d\n", Big(num1, num2, num3));
+
+}
+
+int Big(int x, int y, int z) {
+	if (x > y && x > z)
+		return x;
+	else if (y > x && y > z)
+		return y;
+	return z;
+
+
+}
+
+
+בדיקה האם המספר הוא פריים
+
+
+#include<stdio.h>
+#include<math.h>
+
+
+int isPrime(int number);
+
+
+void main() {
+	int num;
+	printf("Enter a number\n");
+	scanf_s("%d", &num);
+	if (isPrime(num)) {
+		printf("The number is prime\n");
+	}else{
+		printf("The number is not prime");
+	}
+}
+
+int isPrime(int number) {
+	int count = 0;
+	for (int i = 1; i <= number; i++) {
+		if (number % i == 0)
+			count++;
+	}
+	if (count == 2)//אם זה יוצא 2 זה אומר שהוא מתחלק ב1 ועצמו
+		return 1;
+	return 0;
+}
+
+בדיקה מרשימת מספרים מי הכי גבוה ונמוך ומפסיק ב0
+
+
+
+#include<stdio.h>
+#include<math.h>
+
+void main() {
+	int num, max = 0, min = 0;
+
+	printf("Plz enter a number until zero: ");
+	scanf_s("%d", &num);
+
+	while (num != 0)
+	{
+		if (num < max)
+			min = num;
+		else if (num > max)
+			max = num;
+		scanf_s("%d", &num);
+			
+	}
+	printf("The max number is %d \n ", max);
+	printf("The min number is %d \n ", min);
+
+}
+
+#include <stdio.h>
+#include <math.h>
+
+int isPrime(int num);
+
+void main() {
+    int num;
+    printf("Please enter a number to check if it is prime: \n ");
+    scanf("%d", &num);
+    if (isPrime(num))
+        printf("It is a prime number");
+    else if (num < 0)
+        printf("You need a positive number");
+}
+
+int isPrime(int num) {
+    int count = 0;
+    for (int i = 1; i <= sqrt(num); i++) {
+        if (num % i == 0)
+            count++;
+    }
+    if (count == 1)
+        return 1;
+    return 0;
+}
+
+
+שאלה 30 - משולש חוקי
+יש לקלוט 3 מספרים שלמים מן המשתמש המייצגים אורך צלעות של משולש. יש לשלוח את המספרים שנקלטו לפונקציה אשר מציגה לפלט האם האם המשולש חוקי או לא. משולש חוקי הוא משולש שסכום כל שתי צלעות שבו גדול מן האורך של הצלע השלישית.
+
+
+#include <stdio.h>
+#include <math.h>
+
+int triangular(int a, int b, int c);
+
+int main() {
+    int num1, num2, num3;
+
+    printf("Please enter three numbers for triangular: ");
+    scanf_s("%d %d %d", &num1, &num2, &num3);
+
+    if (triangular(num1, num2, num3))
+        printf("This is triangular\n");
+    else
+        printf("This is not triangular\n");
+
+    return 0;
+}
+
+int triangular(int a, int b, int c) {
+    if (a + b > c && a + c > b && b + c > a)
+        return 1;
+    return 0;
+}
+
+סכום עצרת
+
+
+int Factorial(int num);
+
+int main() {
+    int num, my_result;
+    
+    printf("Plz enter a number to see is Factorial  ");
+    scanf_s("%d",&num);
+    my_result = Factorial(num);
+    printf("the factorial of %d is %d \n",num,my_result);
+
+
+
+    return 0;
+}
+
+
+int Factorial(int num) {
+    int result=1;
+    for (int i = 1; i < num; i++) {
+        result *= i;
+        
+    }
+    return result;
+}
+שאלה 33 - פולינדרום
+יש לכתוב פונקציה המקבלת כפרמטר מספר שלם ומחיזרה האם הוא פולינדרום או לא. פולינדרום הוא מספר שניתן לקרוא מהתחלה לסוף ומהסוף להתחלה. יש לקלוט מספר מן המשתמש ולהפעיל את הפונקציה ולהציג האם המספר שנקלט פולינדרום או לא.
+
+
+#include<stdio.h>
+#include<math.h>
+
+int Polydrome_test(int num);
+
+void main() {
+	int num,result;
+	printf("Plz enter a number to see if it polidrom ");
+	scanf_s("%d", &num);
+	if (Polydrome_test(num))
+		printf("The number is Polydrome");
+	else
+		printf("The number  is not Polydrome");
+}
+
+int Polydrome_test(int num) {
+	int original, revers =0, reminder;
+	original = num;
+	while (num != 0)
+	{
+	reminder = num % 10;
+	revers = revers * 10 + reminder;
+	num = num / 10;
+	}
+	if (original == revers)
+		return 1;
+	return 0;
+}
+
+
+
+
+
+
