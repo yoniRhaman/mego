@@ -1,0 +1,29 @@
+"""
+פסאודו קוד:
+1)נקבל מספר שלם מהמשתמש
+
+2)נבדוק אם הוא מתחלק במודולו ל4
+
+3)אם לא נוציא אינה מעוברת
+
+4) אם כן נבדוק אם המספר מתחלק במודולו 100
+
+5)אם לא  שנה מעוברת
+6)אם כן נבדוק האם הוא מתחלק ב400
+
+7)אם לא השנה אינה מעוברת
+
+8)אם כן השנה מעוברת
+"""
+print("Welcome to Calculator to calculate the transition of the year")
+year = (int(input("Please enter the year: ")))
+leap = str(year) + " is a leap year"
+not_leap = str(year) + " is not a leap year"
+if year % 4 != 0:
+    print(not_leap)
+elif year % 100 != 0:
+    print(leap)
+elif year % 400 == 0:
+    print(leap)
+else:
+    print(not_leap)
