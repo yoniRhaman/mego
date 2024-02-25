@@ -1,0 +1,22 @@
+.grid {
+  height: 200px;
+  display: grid;
+  /* פה יש שלוש עמודות שמתחלקות לפי עמודים */
+  /* grid-template-columns: 33% 33% 33%; */
+  /* אפשרות שנייה */
+  grid-template-columns: repeat(3, 1fr);
+  /* רוחב העמודה */
+  /* רווח בין הקופסאות */
+  /* gap: 10px; */
+
+  /* רווח בטורים של הקופסאות */
+  column-gap: 20px;
+  /* רווח בשורות של הקופסאות */
+  row-gap: 10px;
+}
+
+.grid button {
+  height: 200px;
+  cursor: pointer;
+  font-size: 30px;
+}

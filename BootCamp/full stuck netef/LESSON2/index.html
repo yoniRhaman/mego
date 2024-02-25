@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="page">
+      <form id="myForm" class="my-form" onsubmit="register(event)">
+        <h1>Register</h1>
+        <input
+          required
+          name="name"
+          type="text"
+          placeholder="Name..."
+          minlength="2"
+          maxlength="32"
+        />
+        <input
+          required
+          name="dob"
+          type="text"
+          placeholder="Date of birth..."
+          onfocus="this.type = 'date'"
+          onblur="this.type = 'text'"
+          minlength="1"
+        />
+        <input
+          required
+          name="email"
+          type="email"
+          placeholder="Email..."
+          minlength="1"
+        />
+        <div class="radio-group">
+          <div>
+            <label>Male</label>
+            <input type="radio" name="gender" value="male" checked />
+          </div>
+          <div>
+            <label>Female</label>
+            <input type="radio" name="gender" value="female" />
+          </div>
+          <div>
+            <label>Other</label>
+            <input type="radio" name="gender" value="other" />
+          </div>
+        </div>
+        <div>
+          <label for="cars">Choose a car:</label>
+          <select name="car">
+            <option value="alfa romeo 159">Alfa Romeo 159</option>
+            <option value="Peugeot 307">Peugeot 307</option>
+            <option value="Mercedes g63">Mercedes g63</option>
+            <option value="Audi R8">Audi R8</option>
+          </select>
+        </div>
+        <button>Submit</button>
+      </form>
+      <button onclick="showAllUsers()">Show all users</button>
+      <button onclick="resetForm()">reset</button>
+    </div>
+  </body>
+</html>

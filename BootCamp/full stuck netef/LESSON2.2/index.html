@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="page">
+      <form class="my-form" onsubmit="register(event);">
+        <h1>Register</h1>
+        <input
+          required
+          type="text"
+          placeholder="Name..."
+          minlength="2"
+          maxlength="16"
+          name="name"
+        />
+        <input
+          type="text"
+          placeholder="Date of birth..."
+          onfocus="this.type = 'date'"
+          onblur="this.type = 'text'"
+          name="date"
+        />
+        <input
+          minlength="1"
+          name="email"
+          type="email"
+          placeholder="Email..."
+          required
+        />
+        <button>Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

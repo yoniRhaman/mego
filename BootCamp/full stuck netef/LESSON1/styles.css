@@ -1,0 +1,21 @@
+
+.main-titel {
+  color: aqua;
+  font-size: 60px;
+}
+
+.main-titel-2{
+  text-align: center;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+.link-section{
+  width: fit-content;
+  padding: 20px ;
+  background-color: cadetblue;
+  
+
+}

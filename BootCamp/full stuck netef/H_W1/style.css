@@ -1,0 +1,35 @@
+.profile {
+  height: 200px;
+  width: 200px;
+  color: rgb(209, 225, 241, 0.5);
+  margin-top: 10px;
+}
+.profile:hover {
+  scale: 1.5;
+  transform: 1s;
+}
+.profile-img {
+  border: 2px solid black;
+  width: 200px;
+  border-radius: 100%;
+}
+
+.container-text {
+  margin-top: 10px;
+  height: 300px;
+  width: 400px;
+  border: 1px solid black;
+}
+.text {
+  text-align: right;
+}
+
+.container-text-button {
+  margin-top: 5px;
+}
+.text-button {
+  text-align: center;
+  font-size: 10px;
+  width: 100px;
+  border-radius: 30%;
+}

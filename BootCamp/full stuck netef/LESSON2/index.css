@@ -1,0 +1,38 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100vh;
+  align-items: center;
+}
+
+.my-form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 16px;
+}
+
+.my-form h1 {
+  text-align: center;
+}
+
+.my-form input {
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.my-form button {
+  border-radius: 8px;
+  height: 40px;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.radio-group div {
+  display: flex;
+  gap: 20px;
+}
