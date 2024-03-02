@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>reduce() Example</title>
+</head>
+<body>
+<script>
+  // Using reduce() method
+
+  // Example 1: Summing up all elements of an array
+  const numbers = [1, 2, 3, 4, 5];
+  console.log("Example 1: Summing up all elements of an array");
+  const sum = numbers.reduce(function(accumulator, currentValue) {
+    return accumulator + currentValue;
+  }, 0); // Initial value of accumulator is 0
+  console.log("Original array:", numbers);
+  console.log("Sum of all elements:", sum);
+
+  // Example 2: Finding the maximum value in an array
+  const values = [10, 30, 20, 50, 40];
+  console.log("\nExample 2: Finding the maximum value in an array");
+  const max = values.reduce(function(accumulator, currentValue) {
+    return Math.max(accumulator, currentValue);
+  });
+  console.log("Original values:", values);
+  console.log("Maximum value:", max);
+
+  // Example 3: Flattening an array of arrays
+  const arrays = [[1, 2], [3, 4], [5, 6]];
+  console.log("\nExample 3: Flattening an array of arrays");
+  const flattenedArray = arrays.reduce(function(accumulator, currentValue) {
+    return accumulator.concat(currentValue);
+  }, []);
+  console.log("Original array of arrays:", arrays);
+  console.log("Flattened array:", flattenedArray);
+</script>
+</body>
+</html>

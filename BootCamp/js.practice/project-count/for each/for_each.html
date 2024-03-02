@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>forEach Example</title>
+</head>
+<body>
+<script>
+  // Using forEach() method
+
+  // Example 1: Iterating over an array of numbers
+  const numbers = [1, 2, 3, 4, 5];
+  console.log("Example 1: Iterating over an array of numbers");
+  numbers.forEach(function(number) {
+    console.log(number);
+  });
+
+  // Example 2: Iterating over an array of strings
+  const fruits = ['Apple', 'Banana', 'Cherry', 'Date'];
+  console.log("\nExample 2: Iterating over an array of strings");
+  fruits.forEach(function(fruit, index) {
+    console.log(`Index ${index}: ${fruit}`);
+  });
+
+  // Example 3: Modifying array elements
+  const prices = [10, 20, 30, 40, 50];
+  console.log("\nExample 3: Modifying array elements");
+  prices.forEach(function(price, index, array) {
+    array[index] = price * 2; // Double each price
+  });
+  console.log("Doubled prices:", prices);
+
+  // Example 4: Using arrow function
+  const colors = ['Red', 'Green', 'Blue'];
+  console.log("\nExample 4: Using arrow function");
+  colors.forEach(color => console.log(color));
+
+  // Example 5: Using forEach() with objects
+  const person = { name: 'John', age: 30, gender: 'male' };
+  console.log("\nExample 5: Using forEach() with objects");
+  Object.entries(person).forEach(([key, value]) => {
+    console.log(`${key}: ${value}`);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Functions</title>
+</head>
+<body>
+<script>
+  // Using Math.random() functions
+
+  // Math.random(): Returns a random floating-point number between 0 and 1 (exclusive of 1)
+  let randomNum = Math.random();
+  console.log("Random number between 0 and 1:", randomNum);
+
+  // Generating random integer between a range
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min; // The maximum is inclusive and the minimum is inclusive
+  }
+
+  let randomInt = getRandomInt(1, 10); // Random integer between 1 and 10
+  console.log("Random integer between 1 and 10:", randomInt);
+
+  // Generating random boolean value
+  function getRandomBoolean() {
+    return Math.random() < 0.5; // Returns true approximately half of the time
+  }
+
+  let randomBool = getRandomBoolean();
+  console.log("Random boolean value:", randomBool);
+
+  // Shuffling an array
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+    }
+    return array;
+  }
+
+  let originalArray = [1, 2, 3, 4, 5];
+  let shuffledArray = shuffleArray(originalArray.slice()); // Pass a copy of the original array to avoid modifying it
+  console.log("Original array:", originalArray);
+  console.log("Shuffled array:", shuffledArray);
+</script>
+</body>
+</html>

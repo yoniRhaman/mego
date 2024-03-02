@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arrow Functions Example</title>
+</head>
+<body>
+<script>
+  // Using arrow functions
+
+  // Example 1: Simple arrow function
+  const square = x => x * x;
+  console.log("Example 1: Simple arrow function");
+  console.log("Square of 5:", square(5));
+
+  // Example 2: Arrow function with multiple parameters
+  const add = (a, b) => a + b;
+  console.log("\nExample 2: Arrow function with multiple parameters");
+  console.log("Sum of 3 and 7:", add(3, 7));
+
+  // Example 3: Arrow function with block body
+  const greet = name => {
+    return `Hello, ${name}!`;
+  };
+  console.log("\nExample 3: Arrow function with block body");
+  console.log(greet("Alice"));
+
+  // Example 4: Arrow function as callback
+  const numbers = [1, 2, 3, 4, 5];
+  console.log("\nExample 4: Arrow function as callback");
+  const squaredNumbers = numbers.map(number => number * number);
+  console.log("Original array:", numbers);
+  console.log("Squared numbers:", squaredNumbers);
+
+  // Example 5: Arrow function with implicit return
+  const double = n => n * 2;
+  console.log("\nExample 5: Arrow function with implicit return");
+  console.log("Double of 6:", double(6));
+
+  // Example 6: Arrow function in object literal
+  const person = {
+    name: "John",
+    age: 30,
+    greet: () => {
+      console.log(`Hello, my name is ${this.name} and I'm ${this.age} years old.`);
+    }
+  };
+  console.log("\nExample 6: Arrow function in object literal");
+  person.greet(); // Outputs: Hello, my name is undefined and I'm undefined years old.
+</script>
+</body>
+</html>

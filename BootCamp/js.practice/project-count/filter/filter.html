@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>filter() Example</title>
+</head>
+<body>
+<script>
+  // Using filter() method
+
+  // Example 1: Filtering even numbers from an array
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  console.log("Example 1: Filtering even numbers from an array");
+  const evenNumbers = numbers.filter(function(number) {
+    return number % 2 === 0;
+  });
+  console.log("Original array:", numbers);
+  console.log("Even numbers:", evenNumbers);
+
+  // Example 2: Filtering temperatures above 70 degrees
+  const temperatures = [68, 72, 80, 85, 90];
+  console.log("\nExample 2: Filtering temperatures above 70 degrees");
+  const highTemperatures = temperatures.filter(function(temperature) {
+    return temperature > 70;
+  });
+  console.log("Original temperatures:", temperatures);
+  console.log("Temperatures above 70 degrees:", highTemperatures);
+
+  // Example 3: Filtering objects in an array based on a condition
+  const products = [
+    { name: 'Laptop', price: 1000 },
+    { name: 'Phone', price: 500 },
+    { name: 'Tablet', price: 300 },
+    { name: 'Smartwatch', price: 200 }
+  ];
+  console.log("\nExample 3: Filtering objects in an array based on a condition");
+  const affordableProducts = products.filter(function(product) {
+    return product.price < 500;
+  });
+  console.log("Original products:", products);
+  console.log("Affordable products:", affordableProducts);
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOM Manipulation Example</title>
+</head>
+<body>
+  <h1 id="main-heading">DOM Manipulation Example</h1>
+  <div id="content">
+    <p>This is a paragraph.</p>
+    <button id="btn">Click me!</button>
+    <ul id="list">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </div>
+
+<script>
+  // DOM manipulation
+
+  // Example 1: Accessing elements by ID
+  const heading = document.getElementById('main-heading');
+  console.log("Example 1: Accessing elements by ID");
+  console.log("Heading text:", heading.textContent);
+
+  // Example 2: Accessing elements by tag name
+  const paragraphs = document.getElementsByTagName('p');
+  console.log("\nExample 2: Accessing elements by tag name");
+  console.log("Number of paragraphs:", paragraphs.length);
+
+  // Example 3: Accessing elements by class name
+  const items = document.getElementsByClassName('item');
+  console.log("\nExample 3: Accessing elements by class name");
+  console.log("Number of items:", items.length);
+
+  // Example 4: Accessing elements by query selector
+  const button = document.querySelector('#btn');
+  console.log("\nExample 4: Accessing elements by query selector");
+  console.log("Button text:", button.textContent);
+
+  // Example 5: Accessing elements by query selector all
+  const listItems = document.querySelectorAll('#list li');
+  console.log("\nExample 5: Accessing elements by query selector all");
+  listItems.forEach(function(item) {
+    console.log("List item:", item.textContent);
+  });
+
+  // Example 6: Modifying element properties
+  heading.textContent = "New Heading";
+  button.style.backgroundColor = "blue";
+  console.log("\nExample 6: Modifying element properties");
+
+  // Example 7: Creating new elements and appending them
+  const newParagraph = document.createElement('p');
+  newParagraph.textContent = "This is a new paragraph.";
+  document.getElementById('content').appendChild(newParagraph);
+  console.log("\nExample 7: Creating new elements and appending them");
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>map() Example</title>
+</head>
+<body>
+<script>
+  // Using map() method
+
+  // Example 1: Doubling each element of an array
+  //The return is new array...
+  const numbers = [1, 2, 3, 4, 5];
+  console.log("Example 1: Doubling each element of an array");
+  const doubledNumbers = numbers.map(function(number) {
+    return number * 2;
+  });
+  console.log("Original array:", numbers);
+  console.log("Doubled array:", doubledNumbers);
+
+  // Example 2: Converting Fahrenheit temperatures to Celsius
+  const fahrenheitTemperatures = [32, 68, 86, 104, 122];
+  console.log("\nExample 2: Converting Fahrenheit temperatures to Celsius");
+  const celsiusTemperatures = fahrenheitTemperatures.map(function(fahrenheit) {
+    return (fahrenheit - 32) * (5/9);
+  });
+  console.log("Fahrenheit temperatures:", fahrenheitTemperatures);
+  console.log("Celsius temperatures:", celsiusTemperatures);
+
+  // Example 3: Transforming objects in an array
+  const products = [
+    { name: 'Laptop', price: 1000 },
+    { name: 'Phone', price: 500 },
+    { name: 'Tablet', price: 300 }
+  ];
+  console.log("\nExample 3: Transforming objects in an array");
+  const salePrices = products.map(function(product) {
+    return { name: product.name, salePrice: product.price * 0.8 }; // 20% discount
+  });
+  console.log("Original products:", products);
+  console.log("Sale prices:", salePrices);
+</script>
+</body>
+</html>
