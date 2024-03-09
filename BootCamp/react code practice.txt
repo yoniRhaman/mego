@@ -1,0 +1,16 @@
+function App() {
+  const myName = "YONATAN";
+  const multiply = (a, b) => a * b;
+  const specialClass = "simple-class";
+
+  return (
+    <>
+      <h1>{myName}</h1>
+      <p>2*2={2 * 2}</p>
+      <p>My Freinds {["yoni ", "yael"]}</p>
+      <p>3*3 = {multiply(3, 3)}</p>
+      <p className={specialClass}>This is a spaecial class</p>
+    </>
+  );
+}
+export default App;
